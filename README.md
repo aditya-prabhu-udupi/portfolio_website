@@ -4,6 +4,7 @@ Welcome to my personal portfolio website repository.
 This project showcases my background, skills, education, internships, projects, and achievements in a clean, modern, and responsive design.
 
 The website is built using **HTML, CSS, and JavaScript**.
+
 ---
 
 ## Access the website
@@ -17,7 +18,6 @@ The website is built using **HTML, CSS, and JavaScript**.
 - **Fully Responsive Design** (Desktop, Tablet & Mobile)
 - **Fixed Navigation Bar** with active section highlighting
 - **Typed Text Animation** for dynamic introduction
-- **Animated Skill Progress Bars**
 - **Certificates Gallery**
 - **Multilingual Support** (English + Kannada)
 
@@ -68,6 +68,6 @@ The website is built using **HTML, CSS, and JavaScript**.
 
 ## Author
 
-**Aditya Prabhu**
-🎓 B.Tech – Robotics & Artificial Intelligence
+**Aditya Prabhu**  
+🎓 B.Tech – Robotics & Artificial Intelligence  
 📍 Udupi, Karnataka, India
