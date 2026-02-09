@@ -6,442 +6,674 @@
   <title>Aditya Prabhu</title>
   <link rel="icon" type="image/jpg" href="images/aditya.jpg" />
   <link rel="apple-touch-icon" sizes="180x180" href="images/aditya.jpg">
-<meta name="theme-color" content="#0f0f1a" />
-<link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#0f0f1a" />
+  <meta name="description" content="Aditya Prabhu - AI Enthusiast | B.Tech Student Portfolio">
+  <link rel="stylesheet" href="styles.css" />
   <!-- AOS Animation Library -->
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body id="top">
 
+  <!-- LOADING SCREEN -->
+  <div id="loadingScreen" class="loading-screen">
+    <div class="loader-container">
+      <div class="loader"></div>
+      <p class="loading-text">Loading Portfolio<span class="dots"></span></p>
+    </div>
+  </div>
 
   <!-- NAVIGATION -->
- <nav class="navbar">
-  <h1 class="logo">
-    <span class="name-full">Aditya Prabhu</span>
-    <span class="name-short">Aditya</span>
-  </h1>
+  <nav class="navbar">
+    <h1 class="logo">
+      <span class="name-full">Aditya Prabhu</span>
+      <span class="name-short">Aditya</span>
+    </h1>
 
-  <!-- Hamburger -->
-  <div class="menu-toggle" id="menuToggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
-  <div class="nav-links" id="navLinks">
-    <a href="#intro" class="active">Home</a>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#internships">Internships</a>
-    <a href="#projects">Projects</a>
-    <a href="#certificates">Certificates</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-
- 
-<button onclick="window.location.href='index-kn.html'" class="translate-button" id="translateBtn">
-  🌐 Kannada (ಕನ್ನಡ)
-</button>
-
-  <!-- HEADER -->
-   
-  <header>
-  <div id="particles-js"></div>
-  <h1>Hello, <br>I'm Aditya Prabhu</h1>
-  <div id="typed-text"
-     data-phrases="AI Enthusiast|B.Tech Student|Tech Explorer">
-</div>
-
-</header>
-
-
-  <section id="intro" class="intro-section">
-  <div class="intro-container">
-    <div class="intro-image-container">
-      <img src="images/aditya_profile1.png" alt="Aditya Prabhu" class="intro-image" />
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <ul class="intro-points">
-      <li>👨‍💻 AI & Robotics Enthusiast</li>
-      <li>🎓 B.Tech @ Nitte University</li>
-      <li>💡 Passionate about innovation</li>
-      <li>🌱 Constant learner & builder</li>
-    </ul>
-  </div>
-</section>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#intro" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#internships">Internships</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#community">Community Service</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <button onclick="window.location.href='index-kn.html'" class="translate-button" id="translateBtn">
+    🌐 Kannada (ಕನ್ನಡ)
+  </button>
+
+  <!-- HEADER with Particles -->
+  <header>
+    <div id="particles-js"></div>
+    <div class="header-content">
+      <h1 class="glitch" data-text="Hello, I'm Aditya Prabhu">Hello, <br>I'm Aditya Prabhu</h1>
+      <div id="typed-text" data-phrases="AI Enthusiast|B.Tech Student|Tech Explorer"></div>
+      <div class="header-buttons">
+        <a href="https://drive.google.com/file/d/1NWU7ZGL6yKfpOTNciemlyQEYfrn2ugod/view" class="btn-primary">Download Resume</a>
+        <a href="#contact" class="btn-secondary">Get In Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- INTRO SECTION -->
+  <section id="intro" class="intro-section" data-aos="fade-up">
+    <div class="intro-container">
+      <div class="intro-image-container">
+        <div class="image-glow"></div>
+        <img src="images/aditya_profile1.png" alt="Aditya Prabhu" class="intro-image" />
+      </div>
+      <div class="intro-content">
+        <h2 class="intro-title">Quick Introduction</h2>
+        <ul class="intro-points">
+          <li><i class="fas fa-robot"></i> Robotics & AI</li>
+          <li><i class="fas fa-graduation-cap"></i> B.Tech @ Nitte University</li>
+          <li><i class="fas fa-lightbulb"></i> Passionate about innovation</li>
+          <li><i class="fas fa-seedling"></i> Constant learner & builder</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <!-- ABOUT -->
   <section id="about" data-aos="fade-up">
-    <h2>About Me</h2>
-    <ul>
-      <li>Third year B.Tech student in Robotics and Artificial Intelligence at NMAM Institute of Technology, Nitte.</li>
-      <li>Learning and building with Python, JavaScript, HTML, CSS, and basic web development tools.</li>
-      <li>Currently exploring Machine Learning to understand how systems learn patterns from data and make intelligent decisions.</li>
-      <li>Interested in using AI to build useful tools with simple interfaces.</li>
-      <li>Open to internships or collaboration in AI or web development.</li>
-    </ul>
+    <h2><i class="fas fa-user"></i> About Me</h2>
+    <div class="about-content">
+      <p class="about-intro">
+        Third year B.Tech student in Robotics and Artificial Intelligence at NMAM Institute of Technology, Nitte. 
+      </p>
+      <ul>
+        <li>Learning and building with Python, JavaScript, HTML, CSS, and basic web development tools.</li>
+        <li>Currently exploring Machine Learning to understand how systems learn patterns from data and make intelligent decisions.</li>
+        <li>Interested in using AI to build useful tools with simple interfaces.</li>
+        <li>Open to internships or collaboration in AI or web development.</li>
+      </ul>
+    </div>
 
-<div class="about-split-blocks">
-  <div class="info-box">
-    <h2>Languages</h2>
-    <ul>
-      <li>English</li>
-      <li>Hindi</li>
-      <li>Kannada</li>
-      <li>Konkani</li>
-      <li>Tulu</li>
-    </ul>
-  </div>
+    <div class="about-split-blocks">
+      <div class="info-box" data-aos="fade-right">
+        <h2><i class="fas fa-language"></i> Languages</h2>
+        <ul>
+          <li>English</li>
+          <li>Hindi</li>
+          <li>Kannada</li>
+          <li>Konkani</li>
+          <li>Tulu</li>
+        </ul>
+      </div>
 
-  <div class="info-box">
-    <h2>Hobbies</h2>
-    <ul>
-      <li>Explore AI tools</li>
-      <li>Writing Stories</li>
-      <li>Listening to Music</li>
-      <li>Playing Kabaddi (Sport)</li>
-      <li>Travelling</li>
-    </ul>
-  </div>
-</div>
-
+      <div class="info-box" data-aos="fade-left">
+        <h2><i class="fas fa-heart"></i> Hobbies</h2>
+        <ul>
+          <li>Explore AI tools</li>
+          <li>Writing Stories</li>
+          <li>Listening to Music</li>
+          <li>Playing Kabaddi (Sport)</li>
+          <li>Travelling</li>
+        </ul>
+      </div>
+    </div>
 
     <!-- Skills -->
-  
-     <div id="skills" class="skills-wrapper" data-aos="fade-up">
-  <h2>Skills</h2>
-  <div class="skill-bar">
-    <span>Python</span>
-    <div class="bar">
-      <div class="fill" data-width="95%"></div>
+    <div id="skills" class="skills-wrapper" data-aos="fade-up">
+      <h2><i class="fas fa-code"></i> Technical Skills</h2>
+      
+      <div class="skill-bar">
+        <div class="skill-info">
+          <span>Python</span>
+          <span class="skill-percentage">95%</span>
+        </div>
+        <div class="bar">
+          <div class="fill" data-width="95%"></div>
+        </div>
+      </div>
+
+      <div class="skill-bar">
+        <div class="skill-info">
+          <span>HTML, CSS, JavaScript</span>
+          <span class="skill-percentage">80%</span>
+        </div>
+        <div class="bar">
+          <div class="fill" data-width="80%"></div>
+        </div>
+      </div>
+
+      <div class="skill-bar">
+        <div class="skill-info">
+          <span>Flask</span>
+          <span class="skill-percentage">60%</span>
+        </div>
+        <div class="bar">
+          <div class="fill" data-width="60%"></div>
+        </div>
+      </div>
+
+      <div class="skill-bar">
+        <div class="skill-info">
+          <span>GitHub</span>
+          <span class="skill-percentage">60%</span>
+        </div>
+        <div class="bar">
+          <div class="fill" data-width="60%"></div>
+        </div>
+      </div>
+
+      <div class="skill-bar">
+        <div class="skill-info">
+          <span>Machine Learning</span>
+          <span class="skill-percentage">55%</span>
+        </div>
+        <div class="bar">
+          <div class="fill" data-width="55%"></div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="skill-bar">
-    <span>HTML, CSS, JavaScript</span>
-    <div class="bar">
-      <div class="fill" data-width="80%"></div>
+
+    <!-- Courses -->
+    <div id="achievements" class="achievements-wrapper" data-aos="fade-up">
+      <h2><i class="fas fa-award"></i> Courses & Certifications</h2>
+
+      <div class="achievement-card" data-aos="zoom-in">
+        <div class="achievement-icon">
+          <i class="fas fa-brain"></i>
+        </div>
+        <div class="achievement-content">
+          <h3>Introduction to Artificial Intelligence</h3>
+          <p class="achievement-platform">LinkedIn Learning</p>
+          <p>Gained foundational knowledge of AI concepts, applications, and its potential for real-world innovation.</p>
+        </div>
+      </div>
+
+      <div class="achievement-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="achievement-icon">
+          <i class="fab fa-python"></i>
+        </div>
+        <div class="achievement-content">
+          <h3>Crash Course on Python</h3>
+          <p class="achievement-platform">Coursera (Google)</p>
+          <p>Learned to write Python scripts using control flow and effectively manipulate strings, lists, and dictionaries to perform automated tasks.</p>
+        </div>
+      </div>
+
+      <div class="achievement-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="achievement-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <div class="achievement-content">
+          <h3>Intermediate Python</h3>
+          <p class="achievement-platform">DataCamp</p>
+          <p>Improved Python proficiency with practical experience in control structures and data operations.</p>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="skill-bar">
-    <span>Flask</span>
-    <div class="bar">
-      <div class="fill" data-width="60%"></div>
-    </div>
-  </div>
-  <div class="skill-bar">
-    <span>GitHub</span>
-    <div class="bar">
-      <div class="fill" data-width="60%"></div>
-    </div>
-  </div>
-  <div class="skill-bar">
-    <span>Machine Learning</span>
-    <div class="bar">
-      <div class="fill" data-width="55%"></div>
-    </div>
-  </div>
-  </div>
-
- <!-- Courses -->
-
-<div id="achievements" class="achievements-wrapper" data-aos="fade-up">
-  <h2>Courses</h2>
-
-  <div class="achievement-card">
-    <h3>Introduction to Artificial Intelligence – LinkedIn Learning</h3>
-    <p>Gained foundational knowledge of AI concepts, applications, and its potential for real-world innovation.</p>
-    
-  </div>
-
-  <div class="achievement-card">
-    <h3>Crash Course on Python – Coursera</h3>
-    <p> Learned to write Python scripts using control flow and effectively manipulate strings, lists, and dictionaries to perform automated tasks.</p>
-    
-  </div>
-
-  <div class="achievement-card">
-    <h3>Intermediate Python – DataCamp</h3>
-    <p>Improved Python proficiency with practical experience in control structures and data operations.</p>
-    
-  </div> 
-</div>
-</section>
-
-
+  </section>
 
   <!-- EDUCATION -->
   <section id="education" data-aos="zoom-in-up">
-    <h2>Education</h2>
+    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+    
+    <div class="timeline">
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content education-card">
+          <div class="timeline-date">2023 - Present</div>
+          <h3>B.Tech in Robotics & AI</h3>
+          <p><strong>University:</strong> Nitte</p>
+          <p><strong>CGPA:</strong> 8.37 <span class="text-muted">(upto 5th sem)</span></p>
+          <p><strong>Description:</strong> Pursuing undergraduate degree specializing in Robotics and Artificial Intelligence. Focused on AI algorithms, machine learning, and robot design.</p>
+        </div>
+      </div>
 
-    <div class="education-card">
-      <h3>B.Tech in Robotics & AI</h3>
-      <p><strong>University:</strong> Nitte</p>
-      <p><strong>CGPA:</strong> 8.37 <span style="font-size: 14px; color: grey;">(upto 5th sem)</span></p>
-      <p><strong>Duration:</strong> 2023 - Present</p>
-      <p><strong>Description:</strong> Pursuing undergraduate degree specializing in Robotics and Artificial Intelligence. Focused on AI algorithms, machine learning, and robot design.</p>
-    </div>
+      <div class="timeline-item" data-aos="fade-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content education-card">
+          <div class="timeline-date">2023</div>
+          <h3>12th Grade (PCMC Stream)</h3>
+          <p><strong>Institute:</strong> Poornaprajna pre-university college, Udupi</p>
+          <p><strong>Percentage:</strong> 93.33%</p>
+          <p><strong>Details:</strong> Completed higher secondary education with Physics, Chemistry, Mathematics, and Computer Science.</p>
+        </div>
+      </div>
 
-    <div class="education-card">
-      <h3>12th Grade (PCMC Stream)</h3>
-      <p><strong>Institute:</strong> Poornaprajna pre-university college, Udupi</p>
-      <p><strong>Percentage:</strong> 93.33%</p>
-      <p><strong>Passing Year:</strong> 2023</p>
-      <p><strong>Details:</strong> Completed higher secondary education with Physics, Chemistry, Mathematics, and Computer Science.</p>
-    </div>
-
-    <div class="education-card">
-      <h3>10th Grade</h3>
-      <p><strong>Institute:</strong> Narayana e-tech no school, Bengaluru</p>
-      <p><strong>Passing Year:</strong> 2021</p>
-      <p><strong>Details:</strong> Completed 10th grade under the CBSE curriculum.</p>
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content education-card">
+          <div class="timeline-date">2021</div>
+          <h3>10th Grade</h3>
+          <p><strong>School:</strong> Narayana e-tech no school, Bengaluru</p>
+          <p><strong>Percentage:</strong> 74.6%</p>
+          <p><strong>Details:</strong> Completed secondary education under the CBSE curriculum.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- INTERNSHIPS -->
-  <section id="internships" data-aos="fade-left">
-    <h2>Internships</h2>
-
-    <div class="internship-card">
-      <h3>1. Atal Incubation Center, Nitte</h3>
-      <h4>IOT , VR and 3D scanning</h4>
-      <h5>Nov 2023 - March 2024</h5>
-      <p>   <br></p>
-      <ul>
-        <li>Gained hands-on exposure to IoT systems, including sensors and microcontrollers.</li>
-        <li>Worked with VR and 3D scanning workflows to understand data capture, visualization, and real-world applications.</li>
-        <li>Collaborated with a team, improving problem-solving, documentation, and technical communication skills.</li>
-      </ul>
-     </div>
-     </section>
-
-   
- 
-
-  <!-- PROJECTS -->
-  <section id="projects" data-aos="fade-up">
-    <h2>Projects</h2>
-
-   
-    <div class="project-card">
-    <a href="https://schoint.onrender.com/" target= "_blank" style="text-decoration: none;">
-      <h3>1. Scholarship Internship Finder</h3>
-      <p style="font-size: 14px; color: grey;">28 September, 2025</p>
-      <p style="font-size: 14px; color: #009dfe;">Click anywhere to view</p>
-
-      <ul>
-        <li>The project has a database of scholarships and internships with details like eligibility, deadlines, and benefits.</li>
-        <li>Admins can approve scholarships and internships before they are listed on the platform.</li>
-        <li>Users can view detailed information about each scholarship or internship, including requirements, benefits, and application links.</li>
-        <li>Users can subscribe to a newsletter to get updates on new scholarships and internships.</li>
-        <li>Admins can edit or delete listings, and users can search and filter them easily.</li>
-      </ul>
-    </a>
-    </div>
-
-
-    <div class="project-card">
-    <a href="https://drive.google.com/file/d/1b_9smdKjHH3WtDGfaIv8GS41-L6HbXhg/view?usp=sharing" target= "_blank" style="text-decoration: none;">
-      <h3>2. Telegram Bot</h3>
-      <p style="font-size: 14px; color: grey;">23 July, 2025</p>
-      <p style="font-size: 14px; color: #009dfe;">Click anywhere to view</p>
-
-      <ul>
-        <li>Built a Telegram chatbot using Python and the aiogram framework to simulate a ChatGPT-like experience inside Telegram.</li>
-        <li>Integrated the OpenAI GPT-3.5 Turbo model to generate human-like responses to user queries in real-time.</li>
-        <li>Ensured secure API handling and optimized the bot for fast and reliable performance.</li>
-        <li>This project strengthened my understanding of API consumption, asynchronous programming, and bot development with aiogram.</li>
-      </ul>
-    </a>
-    </div>
+  <section id="internships" data-aos="fade-up">
+    <h2><i class="fas fa-briefcase"></i> Internships</h2>
     
-    <div class="project-card">
-      <a href="https://recipe-generator-qful.onrender.com/" target= "_blank" style="text-decoration: none;">
-      <h3>3. Recipe Generator </h3>
-        <p style="font-size: 14px; color: grey;">22 June, 2025</p>
-      <p style="font-size: 14px; color: #009dfe;">Click anywhere to view</p>
-
-        <ul>
-        <li>Built a web application using <strong>Flask</strong> for the backend and <strong>HTML, CSS, JavaScript</strong> for the frontend.</li>
-        <li>Integrated the <strong>OpenAI API</strong> to generate personalized recipes based on user input ingredients.</li>
-        <li>The app outputs a recipe with a generated dish name, ingredients list, step-by-step cooking instructions, and a funfact.</li>
-        <li>Implemented input validation to ensure clean and accurate ingredient entry.</li>
-        <li>Gained practical experience in building interactive applications that generate dynamic content based on user input.</li>
-      </ul>
-      </a>
+    <div class="timeline">
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content internship-card">
+          <div class="timeline-date">Nov 2023 - Mar 2024</div>
+          <h3>IoT, VR, and 3D Scanning Internship</h3>
+          <p><strong>Organization:</strong> Atal Incubation Centre (Nitte)</p>
+          <p><strong>Duration:</strong> 80 hours</p>
+          <ul>
+            <li>Worked on IoT systems with Arduino, LCD screens and sensors like IR.</li>
+            <li>Explored Virtual Reality development with VR headset.</li>
+            <li>Gained knowledge in 3D scanning using Autodesk recap photo, Flashprints and photogrammetry.</li>
+            <li>Collaborated with a team on the project 'Smart Parking System using IoT'.</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    
-
-    <div class="project-card">
-    <a href="https://aditya-prabhu-portfolio.netlify.app/" target= "_blank" style="text-decoration: none;">
-      <h3>4. Portfolio Website</h3>
-      <p style="font-size: 14px; color: grey;">11 June, 2025</p>
-      <p style="font-size: 14px; color: #009dfe;">Click anywhere to view</p>
-
-      <ul>
-        <li>Developed a personal portfolio website using <strong>HTML, CSS, and JavaScript</strong> to showcase projects, skills, and contact information.</li>
-        <li>Designed a responsive and visually engaging layout focused on clean <strong>UI/UX principles</strong>.</li>
-        <li>Included interactive sections such as About, Education, Internships, Projects, Certificates and Contact with smooth scrolling and animations.</li>
-        <li>Customized styling with hover effects, theme colors, and link transitions.</li>
-        <li>Improved skills in front-end development, responsive design, and deploying static websites.</li>
-      </ul>
-    </a>
-    </div> 
   </section>
 
+  <!-- PROJECTS -->
+  <section id="projects" data-aos="zoom-in">
+    <h2><i class="fas fa-project-diagram"></i> My Projects</h2>
 
-<!-- CERTIFICATE SECTION -->
-<section id="certificates" data-aos="zoom-in">
-  <h2>Certificates</h2>
-  <div class="certificate-gallery">
-    
-    <!-- Certificate 1 -->
-    <div class="certificate-item">
-      <a href="https://drive.google.com/file/d/1SHzqRqI_mCQnfPP-Rw62la3vjHtZslYA/view?usp=drive_link" target="_blank" style="text-decoration: none;">
-        <img src="images/AI LinkedIn.jpg" alt="AI Course Certificate" />
-        <h3>Introduction to Artificial Intelligence - LinkedIn Learning</h3>
-      </a>
+    <div class="projects-wrapper">
+      <!-- Project 1 -->
+      <div class="project-card" data-aos="flip-left">
+        <a href="https://schoint.onrender.com/" target="_blank" class="project-link">
+          <div class="project-image">
+            <img src="images/schoint_finder.png" alt="Schoint Finder" onerror="this.src='https://via.placeholder.com/400x250/1a1a2e/e963fd?text=Schoint+Finder'" />
+            <div class="project-overlay-icon">
+              <i class="fas fa-external-link-alt"></i>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3>Schoint Finder</h3>
+            </div>
+            <p class="project-date"><i class="far fa-calendar"></i> 28 September, 2025</p>
+            <p class="project-tech">
+              <span class="tech-tag">Python (Flask)</span>
+              <span class="tech-tag">HTML, CSS, JavaScript</span>
+              <span class="tech-tag">SQLite</span>
+            </p>
+            <ul class="project-features">
+              <li>Designed to help students easily discover scholarships and internships from a single platform</li>
+              <li>It simplifies the search process and provides an admin controlled system to ensure only verified opportunities are published</li>
+              <li>Admins can approve scholarships and internships before they are listed on the platform</li>
+              <li>Users can view detailed information about each scholarship or internship, including requirements, benefits, and application links</li>
+              <li>Users can subscribe to a newsletter to get updates on new scholarships and internships</li>
+            </ul>
+          </div>
+        </a>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card" data-aos="flip-left" data-aos-delay="100">
+        <a href="https://drive.google.com/file/d/1b_9smdKjHH3WtDGfaIv8GS41-L6HbXhg/view?usp=sharing" target="_blank" class="project-link">
+          <div class="project-image">
+            <img src="images/telegram_bot.png" alt="Telegram Bot" onerror="this.src='https://via.placeholder.com/400x250/1a1a2e/e963fd?text=Telegram+Bot'" />
+            <div class="project-overlay-icon">
+              <i class="fas fa-external-link-alt"></i>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3>Telegram AI Bot</h3>
+            </div>
+            <p class="project-date"><i class="far fa-calendar"></i> 23 July, 2025</p>
+            <p class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">aiogram</span>
+              <span class="tech-tag">OpenAI API</span>
+            </p>
+            <ul class="project-features">
+              <li>Developed with Python and aiogram library</li>
+              <li>Integrated OpenAI's GPT-3.5 Turbo model for human-like responses</li>
+              <li>Interacts with users on Telegram and replies to their messages in real time</li>
+              <li>Ensured secure API handling and optimized the bot for fast and reliable performance</li>
+              <li>Enhanced understanding of asynchronous programming</li>
+            </ul>
+          </div>
+        </a>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card" data-aos="flip-left" data-aos-delay="200">
+        <a href="https://recipe-generator-qful.onrender.com/" target="_blank" class="project-link">
+          <div class="project-image">
+            <img src="images/recipe_generator.png" alt="Recipe Generator" onerror="this.src='https://via.placeholder.com/400x250/1a1a2e/e963fd?text=Recipe+Generator'" />
+            <div class="project-overlay-icon">
+              <i class="fas fa-external-link-alt"></i>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3>Recipe Generator</h3>
+            </div>
+            <p class="project-date"><i class="far fa-calendar"></i> 22 June, 2025</p>
+            <p class="project-tech">
+              <span class="tech-tag">Python (Flask)</span>
+               <span class="tech-tag">HTML, CSS, JavaScript</span>
+              <span class="tech-tag">OpenAI API</span>
+            </p>
+            <ul class="project-features">
+              <li>Web app built with Flask backend</li>
+              <li>Generates personalized recipes using OpenAI API</li>
+              <li>Outputs dish name, ingredients, instructions, and fun facts</li>
+              <li>Input validation for clean ingredient entry</li>
+            </ul>
+          </div>
+        </a>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card" data-aos="flip-left" data-aos-delay="300">
+        <a href="https://aditya-prabhu-portfolio.netlify.app/" target="_blank" class="project-link">
+          <div class="project-image">
+            <img src="images/aditya_website.png" alt="Portfolio Website" onerror="this.src='https://via.placeholder.com/400x250/1a1a2e/e963fd?text=Portfolio+Website'" />
+            <div class="project-overlay-icon">
+              <i class="fas fa-external-link-alt"></i>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3>Portfolio Website</h3>
+            </div>
+            <p class="project-date"><i class="far fa-calendar"></i> 11 June, 2025</p>
+            <p class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </p>
+            <ul class="project-features">
+              <li>Personal portfolio with responsive design</li>
+              <li>Clean UI/UX with smooth scrolling and animations</li>
+              <li>Interactive sections with hover effects</li>
+              <li>Deployed on Netlify</li>
+            </ul>
+          </div>
+        </a>
+      </div>
     </div>
+  </section>
 
-    <!-- Certificate 2 -->
-    <div class="certificate-item">
-      <a href="https://drive.google.com/file/d/1o4j67ydQUqsZYnJomSdHfHRSdWdPYhnv/view?usp=drive_link" target="_blank" style="text-decoration: none;">
-        <img src="images/Python coursera.jpg" alt="Python Certificate" />
-        <h3>Crash Course on Python - Coursera (Google) </h3>
-      </a>
+  <!-- CERTIFICATES -->
+  <section id="certificates" data-aos="zoom-in">
+    <h2><i class="fas fa-certificate"></i> Certificates</h2>
+    <div class="certificate-gallery">
+      
+      <div class="certificate-item" data-aos="zoom-in">
+        <a href="https://drive.google.com/file/d/1SHzqRqI_mCQnfPP-Rw62la3vjHtZslYA/view?usp=drive_link" target="_blank">
+          <img src="images/AI LinkedIn.jpg" alt="AI Course Certificate" loading="lazy" />
+          <div class="certificate-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+          <h3>Introduction to Artificial Intelligence</h3>
+          <p class="cert-provider">LinkedIn Learning</p>
+        </a>
+      </div>
+
+      <div class="certificate-item" data-aos="zoom-in" data-aos-delay="50">
+        <a href="https://drive.google.com/file/d/1o4j67ydQUqsZYnJomSdHfHRSdWdPYhnv/view?usp=drive_link" target="_blank">
+          <img src="images/Python coursera.jpg" alt="Python Certificate" loading="lazy" />
+          <div class="certificate-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+          <h3>Crash Course on Python</h3>
+          <p class="cert-provider">Coursera (Google)</p>
+        </a>
+      </div>
+
+      <div class="certificate-item" data-aos="zoom-in" data-aos-delay="100">
+        <a href="https://drive.google.com/file/d/1FwLzK8qTxfFguTChaSYEsxb7f5HpMQw6/view?usp=drive_link" target="_blank">
+          <img src="images/datacamp.jpg" alt="Intermediate Python Certificate" loading="lazy" />
+          <div class="certificate-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+          <h3>Intermediate Python</h3>
+          <p class="cert-provider">DataCamp</p>
+        </a>
+      </div>
+
+      <div class="certificate-item" data-aos="zoom-in" data-aos-delay="150">
+        <a href="https://drive.google.com/file/d/1Lf4Fb44o7TyDG3gQREueiKevdNRBcAnI/view?usp=drive_link" target="_blank">
+          <img src="images/internship.jpg" alt="AIC Internship Certificate" loading="lazy" />
+          <div class="certificate-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+          <h3>IoT, VR and 3D Scanning</h3>
+          <p class="cert-provider">Internship Certificate</p>
+        </a>
+      </div>
+
+      <div class="certificate-item" data-aos="zoom-in" data-aos-delay="200">
+        <a href="https://drive.google.com/file/d/1zStBPFtU2tLEuK9Zx46YQz5IL-WNCJps/view?usp=drive_link" target="_blank">
+          <img src="images/Outreach.jpg" alt="Outreach Program" loading="lazy" />
+          <div class="certificate-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+          <h3>Outreach Program</h3>
+          <p class="cert-provider">RISE & Robotics club</p>
+        </a>
+      </div>
+
+      <div class="certificate-item" data-aos="zoom-in" data-aos-delay="250">
+        <a href="https://drive.google.com/file/d/1XHOv1_gznH1gbAI3mih0Tr6Vqirv_brp/view?usp=drive_link" target="_blank">
+          <img src="images/Career connect.jpg" alt="Career Connect" loading="lazy" />
+          <div class="certificate-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+          <h3>Career Connect</h3>
+          <p class="cert-provider">NMAMIT</p>
+        </a>
+      </div>
+
+      <div class="certificate-item" data-aos="zoom-in" data-aos-delay="300">
+        <a href="https://drive.google.com/file/d/1xqshSVRb6SmY-TEX6Rg3TM3W8aoPpOQ3/view?usp=drive_link" target="_blank">
+          <img src="images/Geomitra.jpg" alt="Geomitra Competition" loading="lazy" />
+          <div class="certificate-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+          <h3>Geomitra Competition</h3>
+          <p class="cert-provider">NMAMIT</p>
+        </a>
+      </div>
+
+      <div class="certificate-item" data-aos="zoom-in" data-aos-delay="350">
+        <a href="https://drive.google.com/file/d/1evT3i0CaG3EA5QH0EG0qT4qHC9U8KoO3/view?usp=drive_link" target="_blank">
+          <img src="images/Matlab.jpg" alt="Matlab Certificate" loading="lazy" />
+          <div class="certificate-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+          <h3>MATLAB Onramp</h3>
+          <p class="cert-provider">MathWorks</p>
+        </a>
+      </div>
+
+      <div class="certificate-item" data-aos="zoom-in" data-aos-delay="400">
+        <a href="https://drive.google.com/file/d/146w9MCbxMWlyOri0ruHucLQrK2pdQbIC/view?usp=sharing" target="_blank">
+          <img src="images/Brain weave.jpg" alt="Brain Weave Certificate" loading="lazy" />
+          <div class="certificate-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+          <h3>Brain Weave</h3>
+          <p class="cert-provider">NMAMIT</p>
+        </a>
+      </div>
     </div>
+  </section>
 
-    <!-- Certificate 3 -->
-    <div class="certificate-item">
-      <a href="https://drive.google.com/file/d/1FwLzK8qTxfFguTChaSYEsxb7f5HpMQw6/view?usp=drive_link" target="_blank" style="text-decoration: none;">
-        <img src="images/datacamp.jpg" alt="Intermediate Python Certificate" />
-        <h3>Intermediate Python - DataCamp</h3>
-      </a>
+  <!-- COMMUNITY SERVICE -->
+<section id="community" data-aos="fade-up">
+  <h2><i class="fas fa-hands-helping"></i> Community Service</h2>
+
+  <div class="achievement-card" data-aos="zoom-in">
+    <div class="achievement-icon">
+      <i class="fas fa-users"></i>
     </div>
-
-    <!-- Certificate 4 -->
-    <div class="certificate-item">
-      <a href="https://drive.google.com/file/d/1Lf4Fb44o7TyDG3gQREueiKevdNRBcAnI/view?usp=drive_link" target="_blank" style="text-decoration: none;">
-        <img src="images/internship.jpg" alt="AIC Internship Certificate" />
-        <h3>IoT, VR and 3D Scanning - Internship</h3>
-      </a>
+    <div class="achievement-content">
+      <h3>Outreach Program</h3>
+      <p class="achievement-platform">RISE & Robotics Club (Nitte) • September 11, 2024</p>
+      <p>Participated in outreach program organized by RISE & Robotics club at NSAM PU College (Nitte), engaging with the students and promoting STEM education and awareness.</p>
     </div>
-
-    <!-- Certificate 5 -->
-    <div class="certificate-item">
-      <a href="https://drive.google.com/file/d/1zStBPFtU2tLEuK9Zx46YQz5IL-WNCJps/view?usp=drive_link" target="_blank" style="text-decoration: none;">
-        <img src="images/Outreach.jpg" alt="Outreach Program" />
-        <h3>Outreach Program - RISE & Robotics club</h3>
-      </a>
-    </div>
-
-    <!-- Certificate 6 -->
-    <div class="certificate-item">
-      <a href="https://drive.google.com/file/d/1XHOv1_gznH1gbAI3mih0Tr6Vqirv_brp/view?usp=drive_link" target="_blank" style="text-decoration: none;">
-        <img src="images/Career connect.jpg" alt="Career Connect" />
-        <h3>Career Connect - NMAMIT</h3>
-      </a>
-    </div>
-
-    <!-- Certificate 7 -->
-    <div class="certificate-item">
-      <a href="https://drive.google.com/file/d/1xqshSVRb6SmY-TEX6Rg3TM3W8aoPpOQ3/view?usp=drive_link" target="_blank" style="text-decoration: none;">
-        <img src="images/Geomitra.jpg" alt="Geomitra Competition" />
-        <h3>Geomitra Competition - NMAMIT</h3>
-      </a>
-    </div>
-
-    <!-- Certificate 8 -->
-    <div class="certificate-item">
-      <a href="https://drive.google.com/file/d/1evT3i0CaG3EA5QH0EG0qT4qHC9U8KoO3/view?usp=drive_link" target="_blank" style="text-decoration: none;">
-        <img src="images/Matlab.jpg" alt="Matlab Certificate" />
-        <h3>MATLAB Onramp - MathWorks</h3>
-      </a>
-    </div>
-
-    <!-- Certificate 9 -->
-    <div class="certificate-item">
-      <a href="https://drive.google.com/file/d/146w9MCbxMWlyOri0ruHucLQrK2pdQbIC/view?usp=sharing" target="_blank" style="text-decoration: none;">
-        <img src="images/Brain weave.jpg" alt="Brain Weave Certificate" />
-        <h3>Brain Weave - NMAMIT</h3>
-      </a>
-    </div>  
-
-    </div>
-</section>
-
-
-
-
-<!-- CONTACT SECTION -->
-<section id="contact" class="section" data-aos="fade-up">
-  <h2>Contact</h2>
-  <p style="margin-bottom: 20px;">Feel free to reach out to me via the following platforms or contact details:</p>
-
- <div class="contact-details" style="margin-bottom: 20px;">
-  <p><strong>Email:</strong>
-    <a href="mailto:aditya.prabhu0910@gmail.com" style="font-size: 15px; color: inherit; text-decoration: underline;">
-      aditya.prabhu0910@gmail.com
-    </a>
-  </p>
-
-  <p><strong>Address:</strong>
-    <span style="font-size: 15px; color: inherit;">Udupi, Karnataka, India</span>
-  </p>
-</div>
-
-
-
-  <div class="contact-icons" style="display: flex; gap: 15px;">
-    <!-- WhatsApp -->
-    <a href="https://wa.me/918217755440" target="_blank" aria-label="WhatsApp">
-      <svg fill="#25D366" height="28" width="28" viewBox="0 0 32 32">
-        <path d="M16.005 3C9.374 3 3.98 8.395 3.98 15.027c0 2.65.819 5.1 2.22 7.15L4 29l6.947-2.166a11.998 11.998 0 005.058 1.182c6.632 0 12.027-5.395 12.027-12.027S22.637 3 16.005 3zm.002 21.927a9.9 9.9 0 01-4.997-1.365l-.356-.21-4.129 1.29 1.283-4.023-.23-.37a9.87 9.87 0 01-1.498-5.216c0-5.455 4.435-9.89 9.89-9.89s9.89 4.435 9.89 9.89-4.436 9.89-9.89 9.89zm5.688-7.383c-.308-.154-1.825-.9-2.107-1.003-.282-.104-.488-.154-.693.155-.204.308-.793 1.003-.973 1.207-.18.204-.359.231-.667.077-.308-.154-1.3-.479-2.476-1.526-.915-.814-1.531-1.82-1.709-2.128-.18-.308-.02-.474.134-.628.138-.138.308-.359.462-.539.155-.18.204-.308.308-.513.103-.205.052-.385-.026-.539-.078-.154-.693-1.674-.949-2.293-.25-.601-.505-.52-.693-.52-.179 0-.385-.026-.59-.026s-.539.077-.82.385c-.282.308-1.076 1.05-1.076 2.563 0 1.512 1.102 2.973 1.255 3.179.154.205 2.16 3.295 5.233 4.62.732.316 1.302.505 1.746.644.733.231 1.401.198 1.928.12.589-.087 1.825-.746 2.084-1.464.256-.718.256-1.334.18-1.464-.077-.128-.282-.204-.59-.359z"/>
-      </svg>
-    </a>
-
-    <!-- GitHub -->
-    <a href="https://github.com/aditya-prabhu-udupi" target="_blank" aria-label="GitHub">
-      <svg fill="#e963fd" height="28" width="28" viewBox="0 0 24 24">
-        <path d="M12 0.296c-6.627 0-12 5.373-12 12 0 5.303 3.438 9.8 8.207 11.387.6.113.793-.261.793-.577v-2.234c-3.338.726-4.033-1.415-4.033-1.415-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.729.082-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.76-1.605-2.665-.304-5.466-1.334-5.466-5.933 0-1.312.469-2.382 1.236-3.221-.124-.303-.536-1.522.118-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 013.003-.403c1.019.005 2.045.137 3.003.403 2.291-1.552 3.297-1.23 3.297-1.23.656 1.654.244 2.873.12 3.176.77.839 1.233 1.909 1.233 3.221 0 4.609-2.807 5.625-5.479 5.921.43.369.823 1.096.823 2.209v3.278c0 .32.192.694.801.576C20.565 22.092 24 17.594 24 12.296c0-6.627-5.373-12-12-12z"/>
-      </svg>
-    </a>
-
-    <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/in/aditya-prabhu-056825290/" target="_blank" aria-label="LinkedIn">
-      <svg fill="#0077B5" height="28" width="28" viewBox="0 0 24 24">
-        <path d="M22.23 0H1.771C.792 0 0 .774 0 1.727V22.27C0 23.226.792 24 1.771 24H22.23C23.208 24 24 23.226 24 22.27V1.727C24 .774 23.208 0 22.23 0zM7.119 20.452H3.562V9.048h3.557v11.404zM5.34 7.578c-1.136 0-2.059-.926-2.059-2.067 0-1.14.923-2.067 2.06-2.067 1.135 0 2.059.926 2.059 2.067 0 1.141-.924 2.067-2.06 2.067zM20.452 20.452h-3.555v-5.569c0-1.328-.027-3.038-1.853-3.038-1.854 0-2.137 1.447-2.137 2.942v5.665h-3.555V9.048h3.414v1.561h.049c.476-.899 1.637-1.847 3.369-1.847 3.601 0 4.268 2.369 4.268 5.452v6.238z"/>
-      </svg>
-    </a>
   </div>
+
+  <div class="achievement-card" data-aos="zoom-in" data-aos-delay="100">
+    <div class="achievement-icon">
+      <i class="fas fa-heart"></i>
+    </div>
+    <div class="achievement-content">
+      <h3>Blood Donation - 1</h3>
+      <p class="achievement-platform">Kasturba Hospital Blood Centre, Manipal • November 26, 2023</p>
+      <p>Donated blood to help save lives and support community healthcare initiatives.</p>
+    </div>
+  </div>
+
+  <div class="achievement-card" data-aos="zoom-in" data-aos-delay="200">
+    <div class="achievement-icon">
+      <i class="fas fa-heart"></i>
+    </div>
+    <div class="achievement-content">
+      <h3>Blood Donation - 2</h3>
+      <p class="achievement-platform">Kasturba Hospital Blood Centre, Manipal • July 27, 2024</p>
+      <p>Continued commitment to regular blood donation for community welfare.</p>
+    </div>
+  </div>
+
+  <div class="achievement-card" data-aos="zoom-in" data-aos-delay="300">
+    <div class="achievement-icon">
+      <i class="fas fa-heart"></i>
+    </div>
+    <div class="achievement-content">
+      <h3>Blood Donation - 3</h3>
+      <p class="achievement-platform">District Hospital Udupi Blood Bank • November 08, 2024</p>
+      <p>Dedicated blood donor contributing to saving lives in the community.</p>
+    </div>
+  </div>
+
+  <div class="achievement-card" data-aos="zoom-in" data-aos-delay="400">
+    <div class="achievement-icon">
+      <i class="fas fa-heart"></i>
+    </div>
+    <div class="achievement-content">
+      <h3>Blood Donation - 4</h3>
+      <p class="achievement-platform">District Hospital Udupi Centre • February 04, 2026</p>
+      <p>Ongoing commitment to blood donation and community health support.</p>
+    </div>
+  </div>
+
 </section>
 
+  <!-- CONTACT -->
+  <section id="contact" class="section" data-aos="fade-up">
+    <h2><i class="fas fa-comments"></i> Get In Touch</h2>
+    <p class="contact-intro">Feel free to reach out to me via the following platforms or send me a message!</p>
 
-<div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px;">
-  
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfsBQtJuZxlVzj1OQNgkFFjWz5_I7t-nvXUd3tO-4XKb9jQuQ/viewform?usp=header" target="_blank" class="btn-resume">Any Queries?</a>
-</div>
+    <div class="contact-container">
+      <!-- Contact Info -->
+      <div class="contact-info" data-aos="fade-right">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:aditya.prabhu0910@gmail.com">aditya.prabhu0910@gmail.com</a>
+          </div>
+        </div>
 
-  <!-- RESUME DOWNLOAD BUTTON -->
-<a href="https://drive.google.com/file/d/1NWU7ZGL6yKfpOTNciemlyQEYfrn2ugod/view" target="_blank" class="btn-resume" download>Download Resume</a>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h4>Location</h4>
+            <p>Udupi, Karnataka, India</p>
+          </div>
+        </div>
 
+        <div class="contact-social">
+          <a href="https://wa.me/918217755440" target="_blank" aria-label="WhatsApp" class="social-icon whatsapp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://github.com/aditya-prabhu-udupi" target="_blank" aria-label="GitHub" class="social-icon github">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/aditya-prabhu-056825290/" target="_blank" aria-label="LinkedIn" class="social-icon linkedin">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
 
+      <!-- Contact Form -->
+      <div class="contact-form-container" data-aos="fade-left">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xreagdjk" method="POST">
+          <div class="form-group">
+            <input type="text" id="name" name="name" required>
+            <label for="name">Your Name</label>
+          </div>
+
+          <div class="form-group">
+            <input type="email" id="email" name="email" required>
+            <label for="email">Your Email</label>
+          </div>
+
+          <div class="form-group">
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <label for="message">Your Message</label>
+          </div>
+
+          <!-- Honeypot field for spam protection -->
+          <input type="text" name="_gotcha" style="display:none">
+          
+          <!-- Hidden field to customize subject -->
+          <input type="hidden" name="_subject" value="New message from Portfolio Website!">
+
+          <button type="submit" class="btn-submit">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+          
+          <div class="form-status" id="formStatus"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="action-buttons">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfsBQtJuZxlVzj1OQNgkFFjWz5_I7t-nvXUd3tO-4XKb9jQuQ/viewform?usp=header" target="_blank" class="btn-resume">
+        <i class="fas fa-question-circle"></i> Any Queries?
+      </a>
+      <a href="https://drive.google.com/file/d/1NWU7ZGL6yKfpOTNciemlyQEYfrn2ugod/view" target="_blank" class="btn-resume">
+        <i class="fas fa-download"></i> Download Resume
+      </a>
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer>
-  <p><b>Made with ❤️ <br>&copy; <span id="year"></span> Aditya Prabhu.</b></p>
-  
-</footer>
-<a href="#top" class="go-top-btn" id="goTopBtn" title="Go to Top" aria-label="Scroll to top">
-  &#8679;
-</a>
+    <div class="footer-content">
+      <p><strong>Made with <i class="fas fa-heart"></i> by Aditya Prabhu</strong></p>
+      <p>&copy; <span id="year"></span> All rights reserved.</p>
+    </div>
+  </footer>
 
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script src="script.js"></script>
+  <!-- Go to Top Button -->
+  <a href="#top" class="go-top-btn" id="goTopBtn" title="Go to Top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
 
+  <!-- Progress Bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-

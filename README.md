@@ -61,6 +61,9 @@ The website is built using **HTML, CSS, and JavaScript**.
 - **Certificates**
   - Certifications 
 
+- **Community Services**
+  - Outreach Program and Blood donations
+
 - **Contact**
   - Email, Whatsapp, LinkedIn, GitHub links
 
