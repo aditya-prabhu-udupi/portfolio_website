@@ -1,20 +1,25 @@
-// ==========================================
-// LOADING SCREEN - Hide immediately when page starts
-// ==========================================
-const loadingScreen = document.getElementById('loadingScreen');
-if (loadingScreen) {
-  // Hide after a short delay
+// =============================
+// LOADING SCREEN 
+// =============================
+
+const MIN_LOADING_TIME = 2000; // 2 seconds
+const startTime = Date.now();
+
+window.addEventListener('load', () => {
+  const loadingScreen = document.getElementById('loadingScreen');
+  if (!loadingScreen) return;
+
+  const elapsedTime = Date.now() - startTime;
+  const remainingTime = Math.max(0, MIN_LOADING_TIME - elapsedTime);
+
   setTimeout(() => {
     loadingScreen.classList.add('hidden');
-  }, 3000);
-}
+    setTimeout(() => {
+      loadingScreen.style.display = 'none';
+    }, 500); 
+  }, remainingTime);
+});
 
-setTimeout(() => {
-  const ls = document.getElementById('loadingScreen');
-  if (ls) {
-    ls.style.display = 'none';
-  }
-}, 1000);
 
 // ==========================================
 // PROGRESS BAR
@@ -439,7 +444,7 @@ if ('IntersectionObserver' in window) {
   });
 }
 
-
+// disabled this as of now
 // ==========================================
 // CURSOR TRAIL EFFECT 
 // ==========================================
