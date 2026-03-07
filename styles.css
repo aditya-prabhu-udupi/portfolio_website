@@ -1291,6 +1291,23 @@ ul li:hover {
   color: white;
 }
 
+.discord {
+  background: rgba(114, 137, 218, 0.1);
+  color: #7289DA;
+}
+
+.discord::before {
+  background: #7289DA;
+}
+
+.discord:hover {
+  transform: translateY(-5px);
+}
+
+.discord:hover i {
+  color: white;
+}
+
 /* Contact Form */
 .contact-form-container {
   background: var(--bg-card);

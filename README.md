@@ -26,11 +26,13 @@ The website is built using **HTML, CSS, and JavaScript**.
 ## Tech Stack
 
 ### Frontend
+
 - **HTML**
 - **CSS**
 - **JavaScript**
 
 ### Libraries & Tools
+
 - **AOS (Animate On Scroll)**
 - **Particles.js**
 - **Font Awesome (Icons)**
@@ -59,13 +61,13 @@ The website is built using **HTML, CSS, and JavaScript**.
   - Academic and personal projects with descriptions
 
 - **Certificates**
-  - Certifications 
+  - Certifications
 
 - **Community Services**
   - Outreach Program and Blood donations
 
 - **Contact**
-  - Email, Whatsapp, LinkedIn, GitHub links
+  - Email, Whatsapp, LinkedIn, GitHub, Discord links
 
 ---
 
