@@ -9,6 +9,11 @@
   <link rel="apple-touch-icon" sizes="180x180" href="images/Aditya.png">
   <meta name="theme-color" content="#0f0f1a" />
   <meta name="description" content="Aditya Prabhu - AI Enthusiast | B.Tech Student Portfolio">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Aditya Prabhu - AI Enthusiast | B.Tech Student Portfolio" />
+  <meta property="og:description" content="Final-year B.Tech student in Robotics and Artificial Intelligence at NMAM Institute of Technology, Nitte. Explore my projects, internships, and certificates." />
+  <meta property="og:image" content="images/aditya_profile1.png" />
+  <meta property="og:url" content="https://adityaprabhu.dev/" />
   <link rel="stylesheet" href="styles.css" />
   <!-- AOS Animation Library -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
@@ -47,7 +52,7 @@
       <a href="#internships">Internships</a>
       <a href="#projects">Projects</a>
       <a href="#certificates">Certificates</a>
-      <a href="#community">Community Services</a>
+      <a href="#activities">Activities</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
@@ -63,12 +68,57 @@
       <h1 class="glitch" data-text="Hello, I'm Aditya Prabhu">Hello, <br>I'm Aditya Prabhu</h1>
       <div id="typed-text" data-phrases="AI Enthusiast|B.Tech Student|Tech Explorer"></div>
       <div class="header-buttons">
-        <a href="https://drive.google.com/file/d/1NWU7ZGL6yKfpOTNciemlyQEYfrn2ugod/view" class="btn-primary">Download
-          Resume</a>
+        <a href="https://drive.google.com/file/d/1NWU7ZGL6yKfpOTNciemlyQEYfrn2ugod/view"
+          class="btn-primary"
+          target="_blank"
+          rel="noopener noreferrer">
+          Download Resume
+        </a>
         <a href="#contact" class="btn-secondary">Get In Touch</a>
       </div>
     </div>
   </header>
+
+  <!-- STATS COUNTER -->
+  <section class="stats-section" data-aos="fade-up">
+    <div class="stats-container">
+      <div class="stat-item">
+        <div class="stat-icon-wrap"><i class="fas fa-project-diagram stat-icon"></i></div>
+        <div class="stat-number-wrap">
+          <span class="stat-number" data-count="4">0</span>
+        </div>
+        <p class="stat-label">Projects Built</p>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon-wrap"><i class="fas fa-award stat-icon"></i></div>
+        <div class="stat-number-wrap">
+          <span class="stat-number" data-count="10">0</span><span class="stat-suffix">+</span>
+        </div>
+        <p class="stat-label">Certificates</p>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon-wrap"><i class="fas fa-briefcase stat-icon"></i></div>
+        <div class="stat-number-wrap">
+          <span class="stat-number" data-count="2">0</span>
+        </div>
+        <p class="stat-label">Internships</p>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon-wrap"><i class="fas fa-graduation-cap stat-icon"></i></div>
+        <div class="stat-number-wrap">
+          <span class="stat-number" data-count="8.40" data-decimal="true">0.00</span>
+        </div>
+        <p class="stat-label">CGPA</p>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon-wrap"><i class="fas fa-tint stat-icon"></i></div>
+        <div class="stat-number-wrap">
+          <span class="stat-number" data-count="5">0</span>
+        </div>
+        <p class="stat-label">Blood Donations</p>
+      </div>
+    </div>
+  </section>
 
   <!-- INTRO SECTION -->
   <section id="intro" class="intro-section" data-aos="fade-up">
@@ -82,8 +132,8 @@
         <ul class="intro-points">
           <li><i class="fas fa-robot"></i> Robotics & AI</li>
           <li><i class="fas fa-graduation-cap"></i> B.Tech @ Nitte University</li>
-          <li><i class="fas fa-lightbulb"></i> Passionate about innovation</li>
-          <li><i class="fas fa-seedling"></i> Constant learner & builder</li>
+          <li><i class="fas fa-lightbulb"></i> Passionate about AI and innovation</li>
+          <li><i class="fas fa-seedling"></i> Continuous learner & builder</li>
         </ul>
       </div>
     </div>
@@ -94,13 +144,13 @@
     <h2><i class="fas fa-user"></i> About Me</h2>
     <div class="about-content">
       <p class="about-intro">
-        Third year B.Tech student in Robotics and Artificial Intelligence at NMAM Institute of Technology, Nitte.
+        Final-year B.Tech student in Robotics and Artificial Intelligence at NMAM Institute of Technology, Nitte.
       </p>
       <ul>
-        <li>Learning and building with Python, JavaScript, HTML, CSS, and basic web development tools.</li>
-        <li>Currently a Software Development Intern at Giddly.com.</li>
+        <li>Learning and building applications using Python, JavaScript, HTML, CSS, and modern web development tools.</li>
+        <li>Worked as a Software Development Intern at Giddly.com. Built the frontend of an educational app.</li>
         <li>Interested in using AI to build useful tools with simple interfaces.</li>
-        <li>Open to internships or collaboration in AI or web development.</li>
+        <li>Open to opportunities or collaboration in AI and web development.</li>
       </ul>
     </div>
 
@@ -120,8 +170,8 @@
         <h2><i class="fas fa-heart"></i> Hobbies</h2>
         <ul>
           <li>Explore AI tools</li>
-          <li>Writing Stories</li>
-          <li>Listening to Music</li>
+          <li>Writing stories</li>
+          <li>Listening to music</li>
           <li>Playing Kabaddi (Sport)</li>
           <li>Travelling</li>
         </ul>
@@ -132,95 +182,82 @@
     <div id="skills" class="skills-wrapper" data-aos="fade-up">
       <h2><i class="fas fa-code"></i> Technical Skills</h2>
 
-      <div class="skill-bar">
-        <div class="skill-info">
-          <span>Python</span>
-          <span class="skill-percentage">95%</span>
+      <div class="skill-tags">
+        <div class="skill-item">
+          <span class="skill-name"><i class="fab fa-python"></i> Python</span>
+          <span class="skill-level level-advanced">Advanced</span>
         </div>
-        <div class="bar">
-          <div class="fill" data-width="95%"></div>
-        </div>
-      </div>
 
-      <div class="skill-bar">
-        <div class="skill-info">
-          <span>HTML, CSS, JavaScript</span>
-          <span class="skill-percentage">80%</span>
+        <div class="skill-item">
+          <span class="skill-name"><i class="fas fa-globe"></i> HTML, CSS, JavaScript</span>
+          <span class="skill-level level-proficient">Proficient</span>
         </div>
-        <div class="bar">
-          <div class="fill" data-width="80%"></div>
-        </div>
-      </div>
 
-      <div class="skill-bar">
-        <div class="skill-info">
-          <span>Flask</span>
-          <span class="skill-percentage">60%</span>
+        <div class="skill-item">
+          <span class="skill-name"><i class="fas fa-flask"></i> Flask</span>
+          <span class="skill-level level-familiar">Familiar</span>
         </div>
-        <div class="bar">
-          <div class="fill" data-width="60%"></div>
-        </div>
-      </div>
 
-      <div class="skill-bar">
-        <div class="skill-info">
-          <span>GitHub</span>
-          <span class="skill-percentage">60%</span>
+        <div class="skill-item">
+          <span class="skill-name"><i class="fab fa-github"></i> GitHub</span>
+          <span class="skill-level level-familiar">Familiar</span>
         </div>
-        <div class="bar">
-          <div class="fill" data-width="60%"></div>
-        </div>
-      </div>
 
-      <div class="skill-bar">
-        <div class="skill-info">
-          <span>React Native</span>
-          <span class="skill-percentage">55%</span>
-        </div>
-        <div class="bar">
-          <div class="fill" data-width="55%"></div>
+        <div class="skill-item">
+          <span class="skill-name"><i class="fab fa-react"></i> React Native</span>
+          <span class="skill-level level-familiar">Familiar</span>
         </div>
       </div>
     </div>
 
     <!-- Courses -->
     <div id="achievements" class="achievements-wrapper" data-aos="fade-up">
-      <h2><i class="fas fa-award"></i> Courses & Certifications</h2>
+      <h2><i class="fas fa-award"></i> Courses</h2>
 
-      <div class="achievement-card" data-aos="zoom-in">
+      <button type="button" class="achievement-card popup-card" data-aos="zoom-in"
+        data-icon="fas fa-brain"
+        data-title="Introduction to Artificial Intelligence"
+        data-subtitle="LinkedIn Learning • January 11, 2025"
+        data-body="<img src='images/certificates/AI LinkedIn.jpg' alt='Introduction to Artificial Intelligence Certificate' class='modal-image'><p>Gained foundational knowledge of AI concepts, applications, and its potential for real-world innovation.</p>">
         <div class="achievement-icon">
           <i class="fas fa-brain"></i>
         </div>
         <div class="achievement-content">
           <h3>Introduction to Artificial Intelligence</h3>
-          <p class="achievement-platform">LinkedIn Learning</p>
-          <p>Gained foundational knowledge of AI concepts, applications, and its potential for real-world innovation.
-          </p>
+          <p class="achievement-platform">LinkedIn Learning • January 11, 2025</p>
+          <p class="card-hint">Tap to view details <i class="fas fa-arrow-right"></i></p>
         </div>
-      </div>
+      </button>
 
-      <div class="achievement-card" data-aos="zoom-in" data-aos-delay="100">
+      <button type="button" class="achievement-card popup-card" data-aos="zoom-in" data-aos-delay="100"
+        data-icon="fab fa-python"
+        data-title="Crash Course on Python"
+        data-subtitle="Coursera (Google) • June 14, 2025"
+        data-body="<img src='images/certificates/Python coursera.jpg' alt='Crash Course on Python Certificate' class='modal-image'><p>Learned to write Python scripts using control flow and effectively manipulate strings, lists, and dictionaries to perform automated tasks.</p>">
         <div class="achievement-icon">
           <i class="fab fa-python"></i>
         </div>
         <div class="achievement-content">
           <h3>Crash Course on Python</h3>
-          <p class="achievement-platform">Coursera (Google)</p>
-          <p>Learned to write Python scripts using control flow and effectively manipulate strings, lists, and
-            dictionaries to perform automated tasks.</p>
+          <p class="achievement-platform">Coursera (Google) • June 14, 2025</p>
+          <p class="card-hint">Tap to view details <i class="fas fa-arrow-right"></i></p>
         </div>
-      </div>
+      </button>
 
-      <div class="achievement-card" data-aos="zoom-in" data-aos-delay="200">
+      <button type="button" class="achievement-card popup-card" data-aos="zoom-in" data-aos-delay="200"
+        data-icon="fas fa-chart-line"
+        data-title="Intermediate Python"
+        data-subtitle="DataCamp • April 03, 2025"
+        data-body="<img src='images/certificates/datacamp.jpg' alt='Intermediate Python Certificate' class='modal-image'><p>Improved Python proficiency with practical experience in control structures and data operations.</p>">
         <div class="achievement-icon">
           <i class="fas fa-chart-line"></i>
         </div>
         <div class="achievement-content">
           <h3>Intermediate Python</h3>
-          <p class="achievement-platform">DataCamp</p>
-          <p>Improved Python proficiency with practical experience in control structures and data operations.</p>
+          <p class="achievement-platform">DataCamp • April 03, 2025</p>
+          <p class="card-hint">Tap to view details <i class="fas fa-arrow-right"></i></p>
         </div>
-      </div>
+      </button>
     </div>
   </section>
 
@@ -273,23 +310,51 @@
     <div class="timeline">
       <div class="timeline-item" data-aos="fade-right">
         <div class="timeline-dot"></div>
-        <div class="timeline-content internship-card">
-          <div class="timeline-date">Mar 2026 - Present</div>
+        <button type="button" class="timeline-content internship-card popup-card"
+          data-icon="fas fa-images"
+          data-title="Software Development Intern"
+          data-subtitle="Giddly.com • Mar 2026 - Apr 2026"
+          data-body="<img src='images/internships/1.jpeg' alt='Giddly Internship Photo 1' class='modal-image'> 
+          <img src='images/internships/2.jpeg' alt='Giddly Internship Photo 2' class='modal-image'> 
+          <img src='images/internships/3.jpeg' alt='Giddly Internship Photo 3' class='modal-image'> 
+          <img src='images/internships/4.jpeg' alt='Giddly Internship Photo 4' class='modal-image'> 
+          <img src='images/internships/5.jpeg' alt='Giddly Internship Photo 5' class='modal-image'> 
+          <img src='images/internships/6.jpeg' alt='Giddly Internship Photo 6' class='modal-image'> 
+          <img src='images/internships/7.jpeg' alt='Giddly Internship Photo 7' class='modal-image'> 
+          <img src='images/internships/8.jpeg' alt='Giddly Internship Photo 8' class='modal-image'> 
+          <img src='images/internships/9.jpeg' alt='Giddly Internship Photo 9' class='modal-image'> 
+          <img src='images/internships/10.jpeg' alt='Giddly Internship Photo 10' class='modal-image'> 
+          <img src='images/internships/11.jpeg' alt='Giddly Internship Photo 11' class='modal-image'> 
+          <img src='images/internships/12.jpeg' alt='Giddly Internship Photo 12' class='modal-image'> 
+          <img src='images/internships/13.jpeg' alt='Giddly Internship Photo 13' class='modal-image'> 
+          <img src='images/certificates/intern_giddly.jpg' alt='Completion certificate' class='modal-image'>">
+          <div class="timeline-date">Mar 2026 - Apr 2026</div>
           <h3>Software Development Intern</h3>
           <p><strong>Organization:</strong> Giddly.com</p>
+          <p><strong>Duration:</strong> 2 months</p>
 
           <ul>
-            <li>Building a role-based educational app with Teacher and Student workflows.</li>
-            <li>Developing assignment management features with submissions, uploads, and feedback.</li>
-            <li>Integrating AI grading results into the frontend with teacher feedback display.</li>
-            <li>Implementing API integration for real-time data flow across app modules.</li>
+            <li>Built the login screen and a 5-tab navigation (Home, Assignment, Events, Messages, Settings) for the app using React Native.</li>
+            <li>Built the complete assignment module for both students and teachers — listing, submission, and upload screens for students; and creation, editing, and submission review screens for teachers.</li>
+            <li>Integrated multiple REST APIs to connect the app with backend data, testing each endpoint in Postman before wiring it into the UI.</li>
+            <li>Worked with a teammate on GitHub, managing branches and resolving merge conflicts throughout development.</li>
           </ul>
-        </div>
+          <p class="card-hint">Tap to view gallery <i class="fas fa-arrow-right"></i></p>
+        </button>
       </div>
 
       <div class="timeline-item" data-aos="fade-right">
         <div class="timeline-dot"></div>
-        <div class="timeline-content internship-card">
+        <button type="button" class="timeline-content internship-card popup-card"
+          data-icon="fas fa-images"
+          data-title="IoT, VR, and 3D Scanning Internship"
+          data-subtitle="Atal Incubation Centre (Nitte) • Nov 2023 - Mar 2024"
+          data-body="<img src='images/internships/int1.jpeg' alt='AIC Internship Photo 1' class='modal-image'> 
+          <img src='images/internships/int2.jpeg' alt='AIC Internship Photo 2' class='modal-image'> 
+          <img src='images/internships/int3.jpeg' alt='AIC Internship Photo 3' class='modal-image'>
+          <img src='images/internships/int4.jpeg' alt='AIC Internship Photo 4' class='modal-image'> 
+          <img src='images/internships/int5.jpeg' alt='AIC Internship Photo 5' class='modal-image'> 
+          <img src='images/certificates/internship.jpg' alt='AIC Internship certificate' class='modal-image'>">
           <div class="timeline-date">Nov 2023 - Mar 2024</div>
           <h3>IoT, VR, and 3D Scanning Internship</h3>
           <p><strong>Organization:</strong> Atal Incubation Centre (Nitte)</p>
@@ -300,7 +365,8 @@
             <li>Gained knowledge in 3D scanning using Autodesk recap photo, Flashprints and photogrammetry.</li>
             <li>Collaborated with a team on the project 'Smart Parking System using IoT'.</li>
           </ul>
-        </div>
+          <p class="card-hint">Tap to view gallery <i class="fas fa-arrow-right"></i></p>
+        </button>
       </div>
     </div>
   </section>
@@ -309,131 +375,90 @@
   <section id="projects" data-aos="zoom-in">
     <h2><i class="fas fa-project-diagram"></i> My Projects</h2>
 
-    <div class="projects-wrapper">
+    <div class="projects-wrapper mini-grid">
       <!-- Project 1 -->
-      <div class="project-card" data-aos="flip-left">
-        <a href="https://schoint.onrender.com/" target="_blank" class="project-link">
-          <div class="project-image">
-            <img src="images/schoint_finder.png" alt="Schoint Finder"
-              onerror="this.src='https://via.placeholder.com/400x250/1a1a2e/e963fd?text=Schoint+Finder'" />
-            <div class="project-overlay-icon">
-              <i class="fas fa-external-link-alt"></i>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-header">
-              <h3>Schoint Finder</h3>
-            </div>
-            <p class="project-date"><i class="far fa-calendar"></i> 28 September, 2025</p>
-            <p class="project-tech">
-              <span class="tech-tag">Python (Flask)</span>
-              <span class="tech-tag">HTML, CSS, JavaScript</span>
-              <span class="tech-tag">SQLite</span>
-            </p>
-            <ul class="project-features">
-              <li>Designed to help students easily discover scholarships and internships from a single platform</li>
-              <li>It simplifies the search process and provides an admin controlled system to ensure only verified
-                opportunities are published</li>
-              <li>Admins can approve scholarships and internships before they are listed on the platform</li>
-              <li>Users can view detailed information about each scholarship or internship, including requirements,
-                benefits, and application links</li>
-              <li>Users can subscribe to a newsletter to get updates on new scholarships and internships</li>
-            </ul>
-          </div>
-        </a>
-      </div>
+      <button type="button" class="project-card-mini popup-project" data-aos="zoom-in"
+        data-image="images/projects/schoint_finder.png"
+        data-fallback="https://via.placeholder.com/400x250/1a1a2e/e963fd?text=Schoint+Finder"
+        data-title="Schoint Finder"
+        data-date="28 September, 2025"
+        data-link="https://schoint.onrender.com/"
+        data-tech="Python (Flask)|HTML, CSS, JavaScript|SQLite"
+        data-features="Designed to help students easily discover scholarships and internships from a single platform|It simplifies the search process and provides an admin controlled system to ensure only verified opportunities are published|Admins can approve scholarships and internships before they are listed on the platform|Users can view detailed information about each scholarship or internship, including requirements, benefits, and application links|Users can subscribe to a newsletter to get updates on new scholarships and internships">
+        <div class="project-mini-image">
+          <img src="images/projects/schoint_finder.png" alt="Schoint Finder"
+            onerror="this.src='https://via.placeholder.com/400x250/1a1a2e/e963fd?text=Schoint+Finder'" />
+          <div class="project-mini-overlay"><i class="fas fa-eye"></i></div>
+        </div>
+        <div class="project-mini-title">
+          <h3>Schoint Finder</h3>
+          <p class="project-mini-date"><i class="far fa-calendar"></i> 28 September, 2025</p>
+          <p class="project-mini-hint">Click to see more details <i class="fas fa-arrow-right"></i></p>
+        </div>
+      </button>
 
       <!-- Project 2 -->
-      <div class="project-card" data-aos="flip-left" data-aos-delay="100">
-        <a href="https://drive.google.com/file/d/1b_9smdKjHH3WtDGfaIv8GS41-L6HbXhg/view?usp=sharing" target="_blank"
-          class="project-link">
-          <div class="project-image">
-            <img src="images/telegram_bot.png" alt="Telegram Bot"
-              onerror="this.src='https://via.placeholder.com/400x250/1a1a2e/e963fd?text=Telegram+Bot'" />
-            <div class="project-overlay-icon">
-              <i class="fas fa-external-link-alt"></i>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-header">
-              <h3>Telegram AI Bot</h3>
-            </div>
-            <p class="project-date"><i class="far fa-calendar"></i> 23 July, 2025</p>
-            <p class="project-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">aiogram</span>
-              <span class="tech-tag">OpenAI API</span>
-            </p>
-            <ul class="project-features">
-              <li>Developed with Python and aiogram library</li>
-              <li>Integrated OpenAI's GPT-3.5 Turbo model for human-like responses</li>
-              <li>Interacts with users on Telegram and replies to their messages in real time</li>
-              <li>Ensured secure API handling and optimized the bot for fast and reliable performance</li>
-              <li>Enhanced understanding of asynchronous programming</li>
-            </ul>
-          </div>
-        </a>
-      </div>
+      <button type="button" class="project-card-mini popup-project" data-aos="zoom-in" data-aos-delay="100"
+        data-image="images/projects/telegram_bot.png"
+        data-fallback="https://via.placeholder.com/400x250/1a1a2e/e963fd?text=Telegram+Bot"
+        data-title="Telegram AI Bot"
+        data-date="23 July, 2025"
+        data-link="https://drive.google.com/file/d/1b_9smdKjHH3WtDGfaIv8GS41-L6HbXhg/view?usp=sharing"
+        data-tech="Python|aiogram|OpenAI API"
+        data-features="Developed with Python and aiogram library|Integrated OpenAI's GPT-3.5 Turbo model for human-like responses|Interacts with users on Telegram and replies to their messages in real time|Ensured secure API handling and optimized the bot for fast and reliable performance|Enhanced understanding of asynchronous programming">
+        <div class="project-mini-image">
+          <img src="images/projects/telegram_bot.png" alt="Telegram Bot"
+            onerror="this.src='https://via.placeholder.com/400x250/1a1a2e/e963fd?text=Telegram+Bot'" />
+          <div class="project-mini-overlay"><i class="fas fa-eye"></i></div>
+        </div>
+        <div class="project-mini-title">
+          <h3>Telegram AI Bot</h3>
+          <p class="project-mini-date"><i class="far fa-calendar"></i> 23 July, 2025</p>
+          <p class="project-mini-hint">Click to see more details <i class="fas fa-arrow-right"></i></p>
+        </div>
+      </button>
 
       <!-- Project 3 -->
-      <div class="project-card" data-aos="flip-left" data-aos-delay="200">
-        <a href="https://recipe-generator-qful.onrender.com/" target="_blank" class="project-link">
-          <div class="project-image">
-            <img src="images/recipe_generator.png" alt="Recipe Generator"
-              onerror="this.src='https://via.placeholder.com/400x250/1a1a2e/e963fd?text=Recipe+Generator'" />
-            <div class="project-overlay-icon">
-              <i class="fas fa-external-link-alt"></i>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-header">
-              <h3>Recipe Generator</h3>
-            </div>
-            <p class="project-date"><i class="far fa-calendar"></i> 22 June, 2025</p>
-            <p class="project-tech">
-              <span class="tech-tag">Python (Flask)</span>
-              <span class="tech-tag">HTML, CSS, JavaScript</span>
-              <span class="tech-tag">OpenAI API</span>
-            </p>
-            <ul class="project-features">
-              <li>Web app built with Flask backend</li>
-              <li>Generates personalized recipes using OpenAI API</li>
-              <li>Outputs dish name, ingredients, instructions, and fun facts</li>
-              <li>Input validation for clean ingredient entry</li>
-            </ul>
-          </div>
-        </a>
-      </div>
+      <button type="button" class="project-card-mini popup-project" data-aos="zoom-in" data-aos-delay="200"
+        data-image="images/projects/recipe_generator.png"
+        data-fallback="https://via.placeholder.com/400x250/1a1a2e/e963fd?text=Recipe+Generator"
+        data-title="Recipe Generator"
+        data-date="22 June, 2025"
+        data-link="https://recipe-generator-qful.onrender.com/"
+        data-tech="Python (Flask)|HTML, CSS, JavaScript|OpenAI API"
+        data-features="Web app built with Flask backend|Generates personalized recipes using OpenAI API|Outputs dish name, ingredients, instructions, and fun facts|Input validation for clean ingredient entry">
+        <div class="project-mini-image">
+          <img src="images/projects/recipe_generator.png" alt="Recipe Generator"
+            onerror="this.src='https://via.placeholder.com/400x250/1a1a2e/e963fd?text=Recipe+Generator'" />
+          <div class="project-mini-overlay"><i class="fas fa-eye"></i></div>
+        </div>
+        <div class="project-mini-title">
+          <h3>Recipe Generator</h3>
+          <p class="project-mini-date"><i class="far fa-calendar"></i> 22 June, 2025</p>
+          <p class="project-mini-hint">Click to see more details <i class="fas fa-arrow-right"></i></p>
+        </div>
+      </button>
 
       <!-- Project 4 -->
-      <div class="project-card" data-aos="flip-left" data-aos-delay="300">
-        <a href="https://aditya-prabhu-portfolio.netlify.app/" target="_blank" class="project-link">
-          <div class="project-image">
-            <img src="images/aditya_website.png" alt="Portfolio Website"
-              onerror="this.src='https://via.placeholder.com/400x250/1a1a2e/e963fd?text=Portfolio+Website'" />
-            <div class="project-overlay-icon">
-              <i class="fas fa-external-link-alt"></i>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-header">
-              <h3>Portfolio Website</h3>
-            </div>
-            <p class="project-date"><i class="far fa-calendar"></i> 11 June, 2025</p>
-            <p class="project-tech">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">JavaScript</span>
-            </p>
-            <ul class="project-features">
-              <li>Personal portfolio with responsive design</li>
-              <li>Clean UI/UX with smooth scrolling and animations</li>
-              <li>Interactive sections with hover effects</li>
-              <li>Deployed on Netlify</li>
-            </ul>
-          </div>
-        </a>
-      </div>
+      <button type="button" class="project-card-mini popup-project" data-aos="zoom-in" data-aos-delay="300"
+        data-image="images/projects/aditya_website.png"
+        data-fallback="https://via.placeholder.com/400x250/1a1a2e/e963fd?text=Portfolio+Website"
+        data-title="Portfolio Website"
+        data-date="11 June, 2025"
+        data-link="https://aditya-prabhu-portfolio.netlify.app/"
+        data-tech="HTML|CSS|JavaScript"
+        data-features="Built a fully responsive personal portfolio from scratch using HTML, CSS, and JavaScript|Added smooth-scroll navigation, section animations, and a typing-effect intro|Designed interactive project and certificate cards with hover previews|Deployed and maintained on Netlify">
+        <div class="project-mini-image">
+          <img src="images/projects/aditya_website.png" alt="Portfolio Website"
+            onerror="this.src='https://via.placeholder.com/400x250/1a1a2e/e963fd?text=Portfolio+Website'" />
+          <div class="project-mini-overlay"><i class="fas fa-eye"></i></div>
+        </div>
+        <div class="project-mini-title">
+          <h3>Portfolio Website</h3>
+          <p class="project-mini-date"><i class="far fa-calendar"></i> 11 June, 2025</p>
+          <p class="project-mini-hint">Click to see more details <i class="fas fa-arrow-right"></i></p>
+        </div>
+      </button>
     </div>
   </section>
 
@@ -442,64 +467,11 @@
     <h2><i class="fas fa-certificate"></i> Certificates</h2>
     <div class="certificate-gallery">
 
+      <!-- Visible in main grid: Quiz Competition, Introduction to AI, Blood donation 1.
+           All certificates (visible + hidden) also appear inside the "More Certificates" popup. -->
       <div class="certificate-item" data-aos="zoom-in">
-        <a href="https://drive.google.com/file/d/1SHzqRqI_mCQnfPP-Rw62la3vjHtZslYA/view?usp=drive_link" target="_blank">
-          <img src="images/AI LinkedIn.jpg" alt="AI Course Certificate" loading="lazy" />
-          <div class="certificate-overlay">
-            <i class="fas fa-search-plus"></i>
-          </div>
-          <h3>Introduction to Artificial Intelligence</h3>
-          <p class="cert-provider">LinkedIn Learning</p>
-        </a>
-      </div>
-
-      <div class="certificate-item" data-aos="zoom-in" data-aos-delay="50">
-        <a href="https://drive.google.com/file/d/1o4j67ydQUqsZYnJomSdHfHRSdWdPYhnv/view?usp=drive_link" target="_blank">
-          <img src="images/Python coursera.jpg" alt="Python Certificate" loading="lazy" />
-          <div class="certificate-overlay">
-            <i class="fas fa-search-plus"></i>
-          </div>
-          <h3>Crash Course on Python</h3>
-          <p class="cert-provider">Coursera (Google)</p>
-        </a>
-      </div>
-
-      <div class="certificate-item" data-aos="zoom-in" data-aos-delay="100">
-        <a href="https://drive.google.com/file/d/1FwLzK8qTxfFguTChaSYEsxb7f5HpMQw6/view?usp=drive_link" target="_blank">
-          <img src="images/datacamp.jpg" alt="Intermediate Python Certificate" loading="lazy" />
-          <div class="certificate-overlay">
-            <i class="fas fa-search-plus"></i>
-          </div>
-          <h3>Intermediate Python</h3>
-          <p class="cert-provider">DataCamp</p>
-        </a>
-      </div>
-
-      <div class="certificate-item" data-aos="zoom-in" data-aos-delay="150">
-        <a href="https://drive.google.com/file/d/1Lf4Fb44o7TyDG3gQREueiKevdNRBcAnI/view?usp=drive_link" target="_blank">
-          <img src="images/internship.jpg" alt="AIC Internship Certificate" loading="lazy" />
-          <div class="certificate-overlay">
-            <i class="fas fa-search-plus"></i>
-          </div>
-          <h3>IoT, VR and 3D Scanning</h3>
-          <p class="cert-provider">Internship Certificate</p>
-        </a>
-      </div>
-
-      <div class="certificate-item" data-aos="zoom-in" data-aos-delay="200">
-        <a href="https://drive.google.com/file/d/1zStBPFtU2tLEuK9Zx46YQz5IL-WNCJps/view?usp=drive_link" target="_blank">
-          <img src="images/Outreach.jpg" alt="Outreach Program" loading="lazy" />
-          <div class="certificate-overlay">
-            <i class="fas fa-search-plus"></i>
-          </div>
-          <h3>Outreach Program</h3>
-          <p class="cert-provider">RISE & Robotics club</p>
-        </a>
-      </div>
-
-      <div class="certificate-item" data-aos="zoom-in" data-aos-delay="200">
-        <a href="https://drive.google.com/file/d/1PiZPEZptpUDu021ND8Y5ynU6AYy4ieS7/view?usp=sharing" target="_blank">
-          <img src="images/BIS quiz.jpg" alt="BIS Quiz" loading="lazy" />
+        <a href="#">
+          <img src="images/certificates/BIS quiz.jpg" alt="BIS Quiz" loading="lazy" />
           <div class="certificate-overlay">
             <i class="fas fa-search-plus"></i>
           </div>
@@ -508,9 +480,76 @@
         </a>
       </div>
 
-      <div class="certificate-item" data-aos="zoom-in" data-aos-delay="250">
-        <a href="https://drive.google.com/file/d/1XHOv1_gznH1gbAI3mih0Tr6Vqirv_brp/view?usp=drive_link" target="_blank">
-          <img src="images/Career connect.jpg" alt="Career Connect" loading="lazy" />
+      <div class="certificate-item" data-aos="zoom-in" data-aos-delay="50">
+        <a href="#">
+          <img src="images/certificates/AI LinkedIn.jpg" alt="AI Course Certificate" loading="lazy" />
+          <div class="certificate-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+          <h3>Introduction to Artificial Intelligence</h3>
+          <p class="cert-provider">LinkedIn Learning</p>
+        </a>
+      </div>
+
+      <div class="certificate-item" data-aos="zoom-in" data-aos-delay="100">
+        <a href="#">
+          <img src="images/certificates/bd1.jpg" alt="Blood donation 1" loading="lazy" />
+          <div class="certificate-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+          <h3>Blood donation 1</h3>
+          <p class="cert-provider">KMC Manipal</p>
+        </a>
+      </div>
+
+      <!-- Hidden in main grid, still shown inside the "More Certificates" popup gallery. -->
+      <div class="certificate-item" style="display:none">
+        <a href="#">
+          <img src="images/certificates/Python coursera.jpg" alt="Python Certificate" loading="lazy" />
+          <div class="certificate-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+          <h3>Crash Course on Python</h3>
+          <p class="cert-provider">Coursera (Google)</p>
+        </a>
+      </div>
+
+      <div class="certificate-item" style="display:none">
+        <a href="#">
+          <img src="images/certificates/datacamp.jpg" alt="Intermediate Python Certificate" loading="lazy" />
+          <div class="certificate-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+          <h3>Intermediate Python</h3>
+          <p class="cert-provider">DataCamp</p>
+        </a>
+      </div>
+
+      <div class="certificate-item" style="display:none">
+        <a href="#">
+          <img src="images/certificates/internship.jpg" alt="AIC Internship Certificate" loading="lazy" />
+          <div class="certificate-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+          <h3>IoT, VR and 3D Scanning</h3>
+          <p class="cert-provider">Internship Certificate</p>
+        </a>
+      </div>
+
+      <div class="certificate-item" style="display:none">
+        <a href="#">
+          <img src="images/certificates/Outreach.jpg" alt="Outreach Program" loading="lazy" />
+          <div class="certificate-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+          <h3>Outreach Program</h3>
+          <p class="cert-provider">RISE & Robotics club</p>
+        </a>
+      </div>
+
+      <div class="certificate-item" style="display:none">
+        <a href="#">
+          <img src="images/certificates/Career connect.jpg" alt="Career Connect" loading="lazy" />
           <div class="certificate-overlay">
             <i class="fas fa-search-plus"></i>
           </div>
@@ -519,9 +558,9 @@
         </a>
       </div>
 
-      <div class="certificate-item" data-aos="zoom-in" data-aos-delay="300">
-        <a href="https://drive.google.com/file/d/1xqshSVRb6SmY-TEX6Rg3TM3W8aoPpOQ3/view?usp=drive_link" target="_blank">
-          <img src="images/Geomitra.jpg" alt="Geomitra Competition" loading="lazy" />
+      <div class="certificate-item" style="display:none">
+        <a href="#">
+          <img src="images/certificates/Geomitra.jpg" alt="Geomitra Competition" loading="lazy" />
           <div class="certificate-overlay">
             <i class="fas fa-search-plus"></i>
           </div>
@@ -530,9 +569,9 @@
         </a>
       </div>
 
-      <div class="certificate-item" data-aos="zoom-in" data-aos-delay="400">
-        <a href="https://drive.google.com/file/d/146w9MCbxMWlyOri0ruHucLQrK2pdQbIC/view?usp=sharing" target="_blank">
-          <img src="images/Brain weave.jpg" alt="Brain Weave Certificate" loading="lazy" />
+      <div class="certificate-item" style="display:none">
+        <a href="#">
+          <img src="images/certificates/Brain weave.jpg" alt="Brain Weave Certificate" loading="lazy" />
           <div class="certificate-overlay">
             <i class="fas fa-search-plus"></i>
           </div>
@@ -540,78 +579,202 @@
           <p class="cert-provider">NMAMIT</p>
         </a>
       </div>
+
+      <div class="certificate-item" style="display:none">
+        <a href="#">
+          <img src="images/certificates/bd2.jpg" alt="Blood donation 2" loading="lazy" />
+          <div class="certificate-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+          <h3>Blood donation 2</h3>
+          <p class="cert-provider">KMC Manipal</p>
+        </a>
+      </div>
+
+      <div class="certificate-item" style="display:none">
+        <a href="#">
+          <img src="images/certificates/bd3.jpg" alt="Blood donation 3" loading="lazy" />
+          <div class="certificate-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+          <h3>Blood donation 3</h3>
+          <p class="cert-provider">District Hospital Udupi</p>
+        </a>
+      </div>
+
+      <div class="certificate-item" style="display:none">
+        <a href="#">
+          <img src="images/certificates/bd4.jpg" alt="Blood donation 4" loading="lazy" />
+          <div class="certificate-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+          <h3>Blood donation 4</h3>
+          <p class="cert-provider">District Hospital Udupi</p>
+        </a>
+      </div>
+
+      <div class="certificate-item" style="display:none">
+        <a href="#">
+          <img src="images/certificates/bd5.jpg" alt="Blood donation 5" loading="lazy" />
+          <div class="certificate-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+          <h3>Blood donation 5</h3>
+          <p class="cert-provider">KMC Manipal</p>
+        </a>
+      </div>
+
+      <button type="button" class="certificate-more-tile" id="moreCertificatesCard" data-aos="zoom-in" data-aos-delay="450">
+        <div class="certificate-more-inner">
+          <i class="fas fa-layer-group"></i>
+          <h3>More Certificates</h3>
+          <p>View full gallery</p>
+        </div>
+      </button>
     </div>
   </section>
 
-  <!-- COMMUNITY SERVICE -->
-  <section id="community" data-aos="fade-up">
-    <h2><i class="fas fa-hands-helping"></i> Community Services</h2>
 
-    <div class="achievement-card" data-aos="zoom-in">
-      <div class="achievement-icon">
-        <i class="fas fa-users"></i>
-      </div>
-      <div class="achievement-content">
-        <h3>Outreach Program</h3>
-        <p class="achievement-platform">RISE & Robotics Club (Nitte) • September 11, 2024</p>
-        <p>Participated in outreach program organized by RISE & Robotics club at NSAM PU College (Nitte), engaging with
-          the students and promoting STEM education and awareness.</p>
-      </div>
-    </div>
+  <!-- Activities -->
+  <section id="activities" data-aos="fade-up">
+    <h2><i class="fas fa-hands-helping"></i> Activities</h2>
 
-    <div class="achievement-card" data-aos="zoom-in" data-aos-delay="100">
-      <div class="achievement-icon">
-        <i class="fas fa-heart"></i>
-      </div>
-      <div class="achievement-content">
-        <h3>Blood Donation - 1</h3>
-        <p class="achievement-platform">Kasturba Hospital Blood Centre, Manipal • November 26, 2023</p>
-        <p>Donated blood to help save lives and support community healthcare initiatives.</p>
-      </div>
-    </div>
+    <div class="activities-grid">
+      <button type="button" class="achievement-card popup-card" data-aos="zoom-in"
+        data-icon="fas fa-users"
+        data-title="Outreach Program"
+        data-subtitle="RISE & Robotics Club (Nitte) • September 11, 2024"
+        data-body="<img src='images/outreach1.jpg' alt='Outreach Program' class='modal-image'>
+        <img src='images/outreach2.jpg' alt='Outreach Program' class='modal-image'>
+        <img src='images/certificates/outreach.jpg' alt='Outreach Program' class='modal-image'>
+        <p>Took part in an outreach program organized by the RISE & Robotics Club at NSAM PU College, Nitte. Spent the day interacting with students and introducing them to basic STEM concepts through simple activities and discussions, aimed at building early interest in science and technology.</p>">
+        <div class="achievement-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="achievement-content">
+          <h3>Outreach Program</h3>
+          <p class="achievement-platform">RISE & Robotics Club (Nitte) • September 11, 2024</p>
+          <p class="card-hint">Tap to view details <i class="fas fa-arrow-right"></i></p>
+        </div>
+      </button>
 
-    <div class="achievement-card" data-aos="zoom-in" data-aos-delay="200">
-      <div class="achievement-icon">
-        <i class="fas fa-heart"></i>
-      </div>
-      <div class="achievement-content">
-        <h3>Blood Donation - 2</h3>
-        <p class="achievement-platform">Kasturba Hospital Blood Centre, Manipal • July 27, 2024</p>
-        <p>Continued commitment to regular blood donation for community welfare.</p>
-      </div>
-    </div>
+      <button type="button" class="achievement-card popup-card" data-aos="zoom-in" data-aos-delay="100"
+        data-icon="fas fa-question-circle"
+        data-title="2nd place in Quiz Competition"
+        data-subtitle="Bureau of Indian Standards (BIS) • February 06, 2026"
+        data-body="<img src='images/bis1.jpg' alt='Quiz Competition' class='modal-image'>
+        <img src='images/certificates/BIS quiz.jpg' alt='Quiz Competition' class='modal-image'>
+        <p>Secured Second Place in a Bureau of Indian Standards (BIS) quiz competition, demonstrating knowledge of national and international standards, quality assurance, and the role of standardization in ensuring product safety, reliability, and industrial excellence.</p>">
+        <div class="achievement-icon">
+          <i class="fas fa-question-circle"></i>
+        </div>
+        <div class="achievement-content">
+          <h3>Quiz Competition (2nd place)</h3>
+          <p class="achievement-platform">Bureau of Indian Standards (BIS) • February 06, 2026</p>
+          <p class="card-hint">Tap to view details <i class="fas fa-arrow-right"></i></p>
+        </div>
+      </button>
 
-    <div class="achievement-card" data-aos="zoom-in" data-aos-delay="300">
-      <div class="achievement-icon">
-        <i class="fas fa-heart"></i>
-      </div>
-      <div class="achievement-content">
-        <h3>Blood Donation - 3</h3>
-        <p class="achievement-platform">District Hospital Udupi Blood Bank • November 08, 2024</p>
-        <p>Dedicated blood donor contributing to saving lives in the community.</p>
-      </div>
-    </div>
+      <button type="button" class="achievement-card popup-card" data-aos="zoom-in" data-aos-delay="150"
+        data-icon="fas fa-brain"
+        data-title="Brain Weave"
+        data-subtitle="NMAMIT • November 15, 2025"
+        data-body="<img src='images/certificates/Brain weave.jpg' alt='Brain Weave' class='modal-image'><p>Participated in Brain Weave, an inter-departmental technical and aptitude event at NMAMIT, testing problem-solving speed and analytical thinking alongside students from other branches.</p>">
+        <div class="achievement-icon">
+          <i class="fas fa-brain"></i>
+        </div>
+        <div class="achievement-content">
+          <h3>Brain Weave</h3>
+          <p class="achievement-platform">NMAMIT • November 15, 2025</p>
+          <p class="card-hint">Tap to view details <i class="fas fa-arrow-right"></i></p>
+        </div>
+      </button>
 
-    <div class="achievement-card" data-aos="zoom-in" data-aos-delay="400">
-      <div class="achievement-icon">
-        <i class="fas fa-heart"></i>
-      </div>
-      <div class="achievement-content">
-        <h3>Blood Donation - 4</h3>
-        <p class="achievement-platform">District Hospital Udupi Centre • February 04, 2026</p>
-        <p>Ongoing commitment to blood donation and community health support.</p>
-      </div>
-    </div>
+      <button type="button" class="achievement-card popup-card" data-aos="zoom-in" data-aos-delay="200"
+        data-icon="fas fa-handshake"
+        data-title="Career Connect"
+        data-subtitle="CSI Student Chapter, NMAMIT • November 11, 2023"
+        data-body="<img src='images/certificates/Career connect.jpg' alt='Career Connect' class='modal-image'><p>Attended Career Connect, a session organized by the CSI Student Chapter at NMAMIT connecting students with industry professionals to discuss career paths, interview preparation, and the skills expected in the tech industry.</p>">
+        <div class="achievement-icon">
+          <i class="fas fa-handshake"></i>
+        </div>
+        <div class="achievement-content">
+          <h3>Career Connect</h3>
+          <p class="achievement-platform">CSI Student Chapter, NMAMIT • November 11, 2023</p>
+          <p class="card-hint">Tap to view details <i class="fas fa-arrow-right"></i></p>
+        </div>
+      </button>
 
-    <div class="achievement-card" data-aos="zoom-in" data-aos-delay="400">
-      <div class="achievement-icon">
-        <i class="fas fa-heart"></i>
-      </div>
-      <div class="achievement-content">
-        <h3>Blood Donation - 5</h3>
-        <p class="achievement-platform">Kasturba Hospital Blood Centre, Manipal • May 27, 2026</p>
-        <p>Reached the milestone of five blood donations, contributing to a life-saving cause.</p>
-      </div>
+      <button type="button" class="achievement-card popup-card" data-aos="zoom-in" data-aos-delay="250"
+        data-icon="fas fa-university"
+        data-title="Campus to Corporate Connect"
+        data-subtitle="Burns and McDonnell • June 19, 2026"
+        data-body="<img src='images/BMS event.jpeg' alt='Campus to Corporate Connect' class='modal-image'><p>Attended the Burns & McDonnell Campus to Corporate Connect Program at BMS College of Engineering, Bengaluru, gaining insights into industry expectations, engineering career opportunities, essential professional skills, and real-world experiences shared by industry experts during an engaging panel discussion.</p>">
+        <div class="achievement-icon">
+          <i class="fas fa-university"></i>
+        </div>
+        <div class="achievement-content">
+          <h3>Campus to Corporate Connect</h3>
+          <p class="achievement-platform">Burns and McDonnell • June 19, 2026</p>
+          <p class="card-hint">Tap to view details <i class="fas fa-arrow-right"></i></p>
+        </div>
+      </button>
+
+      <button type="button" class="achievement-card popup-card" data-aos="zoom-in" data-aos-delay="275"
+        data-icon="fas fa-map-marked-alt"
+        data-title="Geomitra Competition"
+        data-subtitle="NMAMIT • March 22, 2025"
+        data-body="<img src='images/certificates/Geomitra.jpg' alt='Geomitra Competition' class='modal-image'><p>Participated in GEOMITRA, an inter-department competition organized by the Department of Electrical & Electronics Engineering at NMAM Institute of Technology, where teams solved a series of logical and mathematical challenges to uncover clues. The clues were plotted on a graph sheet to reveal the outline of the college campus through connected coordinates, testing analytical thinking, problem-solving, and teamwork.</p>">
+        <div class="achievement-icon">
+          <i class="fas fa-map-marked-alt"></i>
+        </div>
+        <div class="achievement-content">
+          <h3>Geomitra Competition</h3>
+          <p class="achievement-platform">NMAMIT • March 22, 2025</p>
+          <p class="card-hint">Tap to view details <i class="fas fa-arrow-right"></i></p>
+        </div>
+      </button>
+
+      <button type="button" class="achievement-card popup-card blood-card" data-aos="zoom-in" data-aos-delay="300"
+        data-icon="fas fa-tint"
+        data-title="Blood Donation"
+        data-subtitle="5 Donations • Since November 2023"
+        data-body="
+          <div class='donation-entry'>
+            <p><strong>Donation 1</strong> — Kasturba Hospital Blood Centre, Manipal • November 26, 2023</p>
+            <img src='images/certificates/bd1.jpg' alt='Donation 1' class='modal-image'>
+          </div>
+
+          <div class='donation-entry'>
+            <p><strong>Donation 2</strong> — Kasturba Hospital Blood Centre, Manipal • July 27, 2024</p>
+            <img src='images/certificates/bd2.jpg' alt='Donation 2' class='modal-image'>
+          </div>
+
+          <div class='donation-entry'>
+            <p><strong>Donation 3</strong> — District Hospital Udupi Blood Bank • November 08, 2024</p>
+            <img src='images/certificates/bd3.jpg' alt='Donation 3' class='modal-image'>
+          </div>
+
+          <div class='donation-entry'>
+            <p><strong>Donation 4</strong> — District Hospital Udupi Blood Centre • February 04, 2026</p>
+            <img src='images/certificates/bd4.jpg' alt='Donation 4' class='modal-image'>
+          </div>
+
+          <div class='donation-entry'>
+            <p><strong>Donation 5</strong> — Kasturba Hospital Blood Centre, Manipal • May 27, 2026</p>
+            <img src='images/certificates/bd5.jpg' alt='Donation 5' class='modal-image'>
+          </div>">
+
+        <div class="achievement-icon">
+          <i class="fas fa-tint"></i>
+        </div>
+
+        <div class="achievement-content">
+          <h3>Blood Donation <span class="badge-count">x5</span></h3>
+          <p class="achievement-platform">Regular voluntary donor since 2023</p>
+          <p class="card-hint">Tap to view all 5 donations <i class="fas fa-arrow-right"></i></p>
+        </div>
+      </button>
     </div>
   </section>
 
@@ -721,13 +884,63 @@
   <div class="progress-bar" id="progressBar"></div>
 
   <!-- Scripts -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 
   <!-- Particles.js -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
   <!-- AOS Animation -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Detail Popup Modal -->
+  <div class="detail-modal-overlay" id="detailModalOverlay">
+    <div class="detail-modal-box" id="detailModalBox" role="dialog" aria-modal="true">
+      <button class="detail-modal-close" id="detailModalClose" aria-label="Close">&times;</button>
+      <div class="detail-modal-icon" id="detailModalIcon"><i class="fas fa-info-circle"></i></div>
+      <h3 class="detail-modal-title" id="detailModalTitle"></h3>
+      <p class="detail-modal-subtitle" id="detailModalSubtitle"></p>
+      <div class="detail-modal-body" id="detailModalBody"></div>
+    </div>
+  </div>
+
+  <!-- Project Detail Modal -->
+  <div class="project-modal-overlay" id="projectModalOverlay">
+    <div class="project-modal-box" id="projectModalBox" role="dialog" aria-modal="true">
+      <button class="project-modal-close" id="projectModalClose" aria-label="Close">&times;</button>
+      <div class="project-modal-image">
+        <img id="projectModalImage" src="" alt="" />
+      </div>
+      <div class="project-modal-body">
+        <h3 class="project-modal-title" id="projectModalTitle"></h3>
+        <p class="project-modal-date" id="projectModalDate"><i class="far fa-calendar"></i> <span></span></p>
+        <div class="project-modal-tech" id="projectModalTech"></div>
+        <ul class="project-modal-features" id="projectModalFeatures"></ul>
+        <a href="#" target="_blank" rel="noopener" class="project-modal-link" id="projectModalLink">
+          <i class="fas fa-external-link-alt"></i> <span id="projectModalLinkText">Visit Project</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certificate Lightbox (single certificate image, in-page) -->
+  <div class="cert-lightbox-overlay" id="certLightboxOverlay">
+    <div class="cert-lightbox-box" id="certLightboxBox" role="dialog" aria-modal="true">
+      <button class="cert-lightbox-close" id="certLightboxClose" aria-label="Close">&times;</button>
+      <img id="certLightboxImage" src="" alt="" />
+      <div class="cert-lightbox-caption">
+        <h3 id="certLightboxTitle"></h3>
+        <p id="certLightboxProvider"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certificate Gallery Modal (all certificates) -->
+  <div class="cert-gallery-overlay" id="certGalleryOverlay">
+    <div class="cert-gallery-box" id="certGalleryBox" role="dialog" aria-modal="true">
+      <button class="cert-gallery-close" id="certGalleryClose" aria-label="Close">&times;</button>
+      <h3 class="cert-gallery-title"><i class="fas fa-certificate"></i> All Certificates</h3>
+      <div class="cert-gallery-grid" id="certGalleryGrid"></div>
+    </div>
+  </div>
 
   <!-- Custom Scripts -->
   <script src="script.js"></script>

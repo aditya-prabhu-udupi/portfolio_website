@@ -1,4 +1,36 @@
 // =============================
+// SHARED MODAL SCROLL-LOCK HELPERS
+// Used by every popup/modal so the page behind never scrolls while a
+// modal is open, and the page position is restored exactly when closed.
+// =============================
+let __modalScrollY = 0;
+let __modalOpenCount = 0;
+
+function lockBodyScroll() {
+  if (__modalOpenCount === 0) {
+    __modalScrollY = window.scrollY || window.pageYOffset || 0;
+    document.body.style.top = '-' + __modalScrollY + 'px';
+    document.body.classList.add('modal-open');
+  }
+  __modalOpenCount++;
+}
+
+function unlockBodyScroll() {
+  __modalOpenCount = Math.max(0, __modalOpenCount - 1);
+  if (__modalOpenCount === 0) {
+    document.body.classList.remove('modal-open');
+    document.body.style.top = '';
+    // Temporarily disable smooth scrolling so the restore is instant,
+    // not an animated scroll (which looked like the page "reloading").
+    const html = document.documentElement;
+    const prevBehavior = html.style.scrollBehavior;
+    html.style.scrollBehavior = 'auto';
+    window.scrollTo(0, __modalScrollY);
+    html.style.scrollBehavior = prevBehavior;
+  }
+}
+
+// =============================
 // LOADING SCREEN 
 // =============================
 
@@ -31,8 +63,11 @@ if (progressBar) {
     const windowHeight = window.innerHeight;
     const documentHeight = document.documentElement.scrollHeight - windowHeight;
     const scrolled = window.scrollY;
-    const progress = (scrolled / documentHeight) * 100;
-    progressBar.style.width = progress + '%';
+    // Guard against divide-by-zero / negative values when the page content
+    // is shorter than (or equal to) the viewport, which would otherwise
+    // produce NaN% or a nonsensical bar width.
+    const progress = documentHeight > 0 ? (scrolled / documentHeight) * 100 : 0;
+    progressBar.style.width = Math.min(100, Math.max(0, progress)) + '%';
   });
 }
 
@@ -135,6 +170,55 @@ const animateSkillBars = () => {
 
 window.addEventListener("scroll", animateSkillBars);
 window.addEventListener("load", animateSkillBars);
+
+// ==========================================
+// STATS COUNTER ANIMATION
+// ==========================================
+function animateStatCounters() {
+  const statNumbers = document.querySelectorAll('.stat-number');
+  if (!statNumbers.length) return;
+
+  const easeOutQuad = t => t * (2 - t);
+
+  const animateValue = (el) => {
+    const target = parseFloat(el.getAttribute('data-count'));
+    const isDecimal = el.getAttribute('data-decimal') === 'true';
+    const duration = 1600;
+    const startTime = performance.now();
+
+    function update(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeOutQuad(progress);
+      const current = target * eased;
+      el.textContent = isDecimal ? current.toFixed(2) : Math.round(current);
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        el.textContent = isDecimal ? target.toFixed(2) : target;
+      }
+    }
+    requestAnimationFrame(update);
+  };
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.dataset.animated) {
+          entry.target.dataset.animated = 'true';
+          animateValue(entry.target);
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+
+    statNumbers.forEach(el => observer.observe(el));
+  } else {
+    statNumbers.forEach(animateValue);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', animateStatCounters);
 
 // ==========================================
 // PARTICLES JS
@@ -410,8 +494,11 @@ document.head.appendChild(style);
 // ==========================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
+    // Read the href fresh at click-time, since some links (like the
+    // project modal's "Visit Project" button) start as "#" but get
+    // their real destination URL set dynamically via JS later on.
     const href = this.getAttribute('href');
-    if (href !== '#' && href !== '#top') {
+    if (href && href.startsWith('#') && href !== '#' && href !== '#top') {
       e.preventDefault();
       const target = document.querySelector(href);
       if (target) {
@@ -443,59 +530,6 @@ if ('IntersectionObserver' in window) {
     imageObserver.observe(img);
   });
 }
-
-// disabled this as of now
-// ==========================================
-// CURSOR TRAIL EFFECT 
-// ==========================================
-/*
-const canvas = document.createElement('canvas');
-canvas.style.cssText = 'position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;';
-document.body.appendChild(canvas);
-const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-const particles = [];
-
-document.addEventListener('mousemove', (e) => {
-  particles.push({
-    x: e.clientX,
-    y: e.clientY,
-    size: Math.random() * 5 + 1,
-    speedX: Math.random() * 3 - 1.5,
-    speedY: Math.random() * 3 - 1.5,
-    life: 20
-  });
-});
-
-function animateParticles() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  
-  for (let i = particles.length - 1; i >= 0; i--) {
-    const p = particles[i];
-    ctx.fillStyle = `rgba(233, 99, 253, ${p.life / 20})`;
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-    ctx.fill();
-    
-    p.x += p.speedX;
-    p.y += p.speedY;
-    p.life--;
-    
-    if (p.life <= 0) particles.splice(i, 1);
-  }
-  
-  requestAnimationFrame(animateParticles);
-}
-
-animateParticles();
-
-window.addEventListener('resize', () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-});
-*/
 
 // ==========================================
 // PERFORMANCE OPTIMIZATION
@@ -562,6 +596,34 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+// Mobile-friendly equivalent: the keyboard Konami code above is unreachable
+// on touch devices, so tapping the logo 5 times quickly triggers the same
+// easter egg for mobile visitors.
+document.addEventListener('DOMContentLoaded', () => {
+  const logo = document.querySelector('.logo');
+  if (!logo) return;
+
+  let tapCount = 0;
+  let tapTimer = null;
+  const TAP_WINDOW = 1500; // ms allowed between taps
+  const TAPS_REQUIRED = 5;
+
+  logo.addEventListener('click', () => {
+    tapCount++;
+    clearTimeout(tapTimer);
+
+    if (tapCount >= TAPS_REQUIRED) {
+      tapCount = 0;
+      activateEasterEgg();
+      return;
+    }
+
+    tapTimer = setTimeout(() => {
+      tapCount = 0;
+    }, TAP_WINDOW);
+  });
+});
+
 function activateEasterEgg() {
   showNotification('🎉 You found the Easter Egg! Enjoy the sparkles!', 'success');
   
@@ -623,4 +685,233 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     animateSkillBars();
   }, 500);
+});
+
+// ==========================================
+// PROJECT DETAIL MODAL (mini project cards)
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+  const overlay = document.getElementById('projectModalOverlay');
+  if (!overlay) return;
+
+  const imageEl = document.getElementById('projectModalImage');
+  const titleEl = document.getElementById('projectModalTitle');
+  const dateEl = document.getElementById('projectModalDate');
+  const dateTextEl = dateEl ? dateEl.querySelector('span') : null;
+  const techEl = document.getElementById('projectModalTech');
+  const featuresEl = document.getElementById('projectModalFeatures');
+  const linkEl = document.getElementById('projectModalLink');
+  const closeBtn = document.getElementById('projectModalClose');
+
+  function openProjectModal(card) {
+    const image = card.getAttribute('data-image') || '';
+    const fallback = card.getAttribute('data-fallback') || '';
+    const title = card.getAttribute('data-title') || '';
+    const date = card.getAttribute('data-date') || '';
+    const link = card.getAttribute('data-link') || '#';
+    const tech = (card.getAttribute('data-tech') || '').split('|').map(t => t.trim()).filter(Boolean);
+    const features = (card.getAttribute('data-features') || '').split('|').map(f => f.trim()).filter(Boolean);
+
+    if (imageEl) {
+      imageEl.src = image;
+      imageEl.alt = title;
+      imageEl.onerror = () => { if (fallback) imageEl.src = fallback; };
+    }
+
+    if (titleEl) titleEl.textContent = title;
+
+    if (dateTextEl) {
+      dateTextEl.textContent = date;
+    } else if (dateEl) {
+      dateEl.textContent = date;
+    }
+
+    if (techEl) {
+      techEl.innerHTML = '';
+      tech.forEach(t => {
+        const span = document.createElement('span');
+        span.className = 'tech-tag';
+        span.textContent = t;
+        techEl.appendChild(span);
+      });
+    }
+
+    if (featuresEl) {
+      featuresEl.innerHTML = '';
+      features.forEach(f => {
+        const li = document.createElement('li');
+        li.textContent = f;
+        featuresEl.appendChild(li);
+      });
+    }
+
+    if (linkEl) linkEl.href = link;
+
+    overlay.classList.add('active');
+    const box = document.getElementById('projectModalBox');
+    if (box) box.scrollTop = 0;
+    lockBodyScroll();
+  }
+
+  function closeProjectModal() {
+    overlay.classList.remove('active');
+    unlockBodyScroll();
+  }
+
+  // These are now native <button> elements, so keyboard activation
+  // (Enter/Space) already fires a real 'click' event on its own — no need
+  // for manual tabindex/role or a keypress handler (adding one back would
+  // double-fire openProjectModal on Enter/Space and break the scroll lock).
+  document.querySelectorAll('.project-card-mini').forEach(card => {
+    card.addEventListener('click', () => openProjectModal(card));
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeProjectModal);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeProjectModal(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('active')) closeProjectModal();
+  });
+});
+
+// ==========================================
+// CERTIFICATE GALLERY MODAL ("More Certificates" popup)
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+  const moreCard = document.getElementById('moreCertificatesCard');
+  const overlay = document.getElementById('certGalleryOverlay');
+  const grid = document.getElementById('certGalleryGrid');
+  const closeBtn = document.getElementById('certGalleryClose');
+  if (!moreCard || !overlay || !grid) return;
+
+  // Built once and reused — previously this rebuilt fresh <img> elements
+  // from scratch every single time the popup opened, which meant
+  // re-creating (and potentially re-fetching) every certificate image on
+  // each open. cloneNode also lets the browser reuse the already-decoded
+  // image data instead of starting a brand-new <img> element from zero.
+  let galleryBuilt = false;
+
+  function buildGallery() {
+    if (galleryBuilt) return;
+    galleryBuilt = true;
+
+    grid.innerHTML = '';
+    const fragment = document.createDocumentFragment();
+
+    document.querySelectorAll('#certificates .certificate-item').forEach(item => {
+      const clone = item.cloneNode(true);
+      clone.style.display = ''; // some source items are hidden (display:none) in the main grid
+      fragment.appendChild(clone);
+    });
+
+    grid.appendChild(fragment);
+  }
+
+  function openGallery() {
+    buildGallery();
+    overlay.classList.add('active');
+    const box = document.getElementById('certGalleryBox');
+    if (box) box.scrollTop = 0;
+    lockBodyScroll();
+  }
+
+  function closeGallery() {
+    overlay.classList.remove('active');
+    unlockBodyScroll();
+  }
+
+  // moreCard is now a native <button>, so it's keyboard-activatable out of
+  // the box — a manual keypress handler here would double-fire openGallery
+  // on Enter/Space and break the scroll lock counter.
+  moreCard.addEventListener('click', openGallery);
+
+  if (closeBtn) closeBtn.addEventListener('click', closeGallery);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeGallery(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeGallery(); });
+});
+
+// ==========================================
+// CERTIFICATE LIGHTBOX (opens certificate image in-page instead of an external link)
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+  const overlay = document.getElementById('certLightboxOverlay');
+  const imgEl = document.getElementById('certLightboxImage');
+  const titleEl = document.getElementById('certLightboxTitle');
+  const providerEl = document.getElementById('certLightboxProvider');
+  const closeBtn = document.getElementById('certLightboxClose');
+  if (!overlay || !imgEl || !closeBtn) return;
+
+  function openLightbox(anchor) {
+    const img = anchor.querySelector('img');
+    const title = anchor.querySelector('h3');
+    const provider = anchor.querySelector('.cert-provider');
+    if (!img) return;
+
+    imgEl.src = img.src;
+    imgEl.alt = img.alt || '';
+    titleEl.textContent = title ? title.textContent : '';
+    providerEl.textContent = provider ? provider.textContent : '';
+    overlay.classList.add('active');
+    const box = document.getElementById('certLightboxBox');
+    if (box) box.scrollTop = 0;
+    lockBodyScroll();
+  }
+
+  function closeLightbox() {
+    overlay.classList.remove('active');
+    unlockBodyScroll();
+  }
+
+  // Event delegation so this also works for certificates cloned into the
+  // "More Certificates" gallery popup.
+  document.addEventListener('click', (e) => {
+    const anchor = e.target.closest('#certificates .certificate-item a, #certGalleryGrid .certificate-item a');
+    if (!anchor) return;
+    e.preventDefault();
+    openLightbox(anchor);
+  });
+
+  closeBtn.addEventListener('click', closeLightbox);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeLightbox(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+});
+
+// ==========================================
+// DETAIL POPUP MODAL (achievement/activity/internship "popup-card" elements)
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+  const overlay = document.getElementById('detailModalOverlay');
+  const titleEl = document.getElementById('detailModalTitle');
+  const subEl = document.getElementById('detailModalSubtitle');
+  const bodyEl = document.getElementById('detailModalBody');
+  const iconEl = document.getElementById('detailModalIcon');
+  const closeBtn = document.getElementById('detailModalClose');
+  if (!overlay || !closeBtn) return;
+
+  function openModal(card) {
+    const icon = card.getAttribute('data-icon') || 'fas fa-info-circle';
+    iconEl.innerHTML = `<i class="${icon}"></i>`;
+    titleEl.textContent = card.getAttribute('data-title') || '';
+    subEl.textContent = card.getAttribute('data-subtitle') || '';
+    bodyEl.innerHTML = card.getAttribute('data-body') || '';
+    overlay.classList.add('active');
+    const box = document.getElementById('detailModalBox');
+    if (box) box.scrollTop = 0;
+    lockBodyScroll();
+  }
+
+  function closeModal() {
+    overlay.classList.remove('active');
+    unlockBodyScroll();
+  }
+
+  // popup-card elements are now native <button>s, so Enter/Space already
+  // trigger a real 'click' — a manual keypress handler would double-fire
+  // openModal and break the scroll lock counter.
+  document.querySelectorAll('.popup-card').forEach(card => {
+    card.addEventListener('click', () => openModal(card));
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 });

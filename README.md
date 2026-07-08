@@ -1,78 +1,68 @@
-# Personal Portfolio Website
+# Aditya Prabhu — Portfolio Website
 
-Welcome to my personal portfolio website repository.  
+Welcome to my personal portfolio website repository.
 This project showcases my background, skills, education, internships, projects, and achievements in a clean, modern, and responsive design.
 
-The website is built using **HTML, CSS, and JavaScript**.
+Built using **HTML, CSS, and JavaScript**.
 
 ---
 
-## Access the website
+## 🔗 Live Site
 
-🔗 **Portfolio Website:** [Click here](https://aditya-prabhu-portfolio.netlify.app/)
+**[aditya-prabhu-portfolio.netlify.app](https://aditya-prabhu-portfolio.netlify.app/)**
 
 ---
 
 ## Features
 
-- **Fully Responsive Design** (Desktop, Tablet & Mobile)
-- **Fixed Navigation Bar** with active section highlighting
-- **Typed Text Animation** for dynamic introduction
-- **Certificates Gallery**
-- **Multilingual Support** (English + Kannada)
+- **Fully Responsive** — looks great on desktop, tablet, and mobile
+- **Fixed Navigation Bar** with active-section highlighting
+- **Typed Text Animation** for a dynamic intro
+- **Animated Stats Counter** (projects, certificates, internships, CGPA, blood donations)
+- **Interactive Modals** for project details, courses, internships, and achievements
+- **Certificate Gallery** with lightbox viewer
+- **Working Contact Form** (powered by Formspree)
+- **Multilingual Support** — English and Kannada
+- **Scroll Animations** via AOS, plus a "back to top" button
 
 ---
 
 ## Tech Stack
 
-### Frontend
+**Frontend**
 
-- **HTML**
-- **CSS**
-- **JavaScript**
+- HTML5
+- CSS3
+- JavaScript (vanilla)
 
-### Libraries & Tools
+**Libraries & Tools**
 
-- **AOS (Animate On Scroll)**
-- **Particles.js**
-- **Font Awesome (Icons)**
-- **Google Fonts**
-- **Git & GitHub**
+- [AOS](https://michalsnik.github.io/aos/) — Animate On Scroll
+- [Particles.js](https://vincentgarreau.com/particles.js/) — animated background
+- [Font Awesome](https://fontawesome.com/) — icons
+- Google Fonts
+- [Formspree](https://formspree.io/) — contact form backend
+- Git & GitHub
 
 ---
 
 ## Website Sections
 
-- **Home**
-  - Name, role, and animated text
-  - Profile image
-
-- **About**
-  - Personal summary
-  - Languages, Hobbies, Skills and Courses
-
-- **Education**
-  - Academic background and qualifications
-
-- **Internships**
-  - Practical experience and roles
-
-- **Projects**
-  - Academic and personal projects with descriptions
-
-- **Certificates**
-  - Certifications
-
-- **Community Services**
-  - Outreach Program and Blood donations
-
-- **Contact**
-  - Email, Whatsapp, LinkedIn, GitHub, Discord links
+| Section          | What's inside                                                       |
+| ---------------- | ------------------------------------------------------------------- |
+| **Home**         | Name, animated role text, profile image                             |
+| **About**        | Personal summary, languages, hobbies, technical skills, and courses |
+| **Education**    | Academic background and qualifications                              |
+| **Internships**  | Roles, responsibilities, and photo gallery                          |
+| **Projects**     | Academic and personal projects with details                         |
+| **Certificates** | Certifications with a full gallery view                             |
+| **Activities**   | Outreach programs, competitions, and blood donations                |
+| **Contact**      | Email, WhatsApp, LinkedIn, GitHub, Discord, and a message form      |
 
 ---
 
 ## Author
 
 **Aditya Prabhu**  
-🎓 B.Tech – Robotics & Artificial Intelligence  
+🎓 B.Tech — Robotics & Artificial Intelligence, NMAM Institute of Technology, Nitte  
 📍 Udupi, Karnataka, India
