@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aditya-prabhu-portfolio.netlify.app/sitemap.xml

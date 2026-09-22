@@ -1,4 +1,30 @@
 // =============================
+// WEBP FALLBACK
+// Images are served as WebP with the original JPG/PNG (and, for a few
+// project thumbnails, a final placeholder image) kept as a fallback chain
+// in data-fallback, pipe-separated: "original.png|https://placeholder...".
+// This listens for load failures on ANY <img> in the page (including ones
+// injected later into modals/galleries) and steps through that chain —
+// so browsers/environments without WebP support, or a genuinely missing
+// image, still show something instead of a broken icon.
+// Capture phase is required because the 'error' event does not bubble.
+// =============================
+document.addEventListener('error', (e) => {
+  const img = e.target;
+  if (!img || img.tagName !== 'IMG') return;
+  const chain = img.getAttribute('data-fallback');
+  if (!chain) return;
+  const [next, ...rest] = chain.split('|');
+  if (!next || img.src.endsWith(next)) return; // avoid an infinite retry loop
+  img.src = next;
+  if (rest.length) {
+    img.setAttribute('data-fallback', rest.join('|'));
+  } else {
+    img.removeAttribute('data-fallback');
+  }
+}, true);
+
+// =============================
 // SHARED MODAL SCROLL-LOCK HELPERS
 // Used by every popup/modal so the page behind never scrolls while a
 // modal is open, and the page position is restored exactly when closed.
@@ -715,7 +741,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (imageEl) {
       imageEl.src = image;
       imageEl.alt = title;
-      imageEl.onerror = () => { if (fallback) imageEl.src = fallback; };
+      // WebP fallback for this image is handled by the global 'error'
+      // listener, which reads data-fallback off the element.
+      if (fallback) {
+        imageEl.setAttribute('data-fallback', fallback);
+      } else {
+        imageEl.removeAttribute('data-fallback');
+      }
     }
 
     if (titleEl) titleEl.textContent = title;
@@ -848,6 +880,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     imgEl.src = img.src;
     imgEl.alt = img.alt || '';
+    const thumbFallback = img.getAttribute('data-fallback');
+    if (thumbFallback) {
+      imgEl.setAttribute('data-fallback', thumbFallback);
+    } else {
+      imgEl.removeAttribute('data-fallback');
+    }
     titleEl.textContent = title ? title.textContent : '';
     providerEl.textContent = provider ? provider.textContent : '';
     overlay.classList.add('active');
@@ -914,4 +952,43 @@ document.addEventListener('DOMContentLoaded', () => {
   closeBtn.addEventListener('click', closeModal);
   overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+});
+
+// ==========================================
+// TRANSLATION NOTICE POPUP (Kannada page only)
+// Shows once per browser session on entry; a small floating icon lets
+// the visitor reopen it anytime after closing it.
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+  const overlay = document.getElementById('translationPopupOverlay');
+  const closeBtn = document.getElementById('translationPopupClose');
+  const floatBtn = document.getElementById('translationFloatBtn');
+  if (!overlay || !closeBtn || !floatBtn) return; // not on this page
+
+  const DISMISS_KEY = 'translationNoticeDismissed';
+
+  function openNotice() {
+    overlay.classList.add('active');
+    lockBodyScroll();
+  }
+
+  function closeNotice() {
+    overlay.classList.remove('active');
+    unlockBodyScroll();
+    try { sessionStorage.setItem(DISMISS_KEY, '1'); } catch (e) { /* ignore */ }
+  }
+
+  let alreadyDismissed = false;
+  try { alreadyDismissed = sessionStorage.getItem(DISMISS_KEY) === '1'; } catch (e) { /* ignore */ }
+
+  if (!alreadyDismissed) {
+    openNotice();
+  }
+
+  closeBtn.addEventListener('click', closeNotice);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeNotice(); });
+  floatBtn.addEventListener('click', openNotice);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('active')) closeNotice();
+  });
 });

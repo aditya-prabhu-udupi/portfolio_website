@@ -46,6 +46,21 @@ Built using **HTML, CSS, and JavaScript**.
 
 ---
 
+## Featured Projects
+
+| Project                                                                    | Stack                                             | Status                           |
+| -------------------------------------------------------------------------- | ------------------------------------------------- | -------------------------------- |
+| [Udupi Mallige Disease Detection](https://comingsoonprojectt.netlify.app/) | Python, CNN                                       | In Progress (Sep 2026 – Present) |
+| [Krishi](https://comingsoonprojectt.netlify.app/)                          | Flask, PostgreSQL, HTML, CSS, JavaScript, PWA     | In Progress (Jun 2026 – Present) |
+| [Schoint Finder](https://schoint.onrender.com/)                            | Python (Flask), HTML, CSS, JavaScript, SQLite     | Completed                        |
+| Telegram AI Bot                                                            | Python, aiogram, OpenAI API                       | Completed                        |
+| [Recipe Generator](https://recipe-generator-qful.onrender.com/)            | Python (Flask), HTML, CSS, JavaScript, OpenAI API | Completed                        |
+| [Portfolio Website](https://aditya-prabhu-portfolio.netlify.app/)          | HTML, CSS, JavaScript                             | Ongoing refinement               |
+
+> Note: Udupi Mallige Disease Detection and Krishi are still under active development — their project links currently point to a "coming soon" placeholder until each is deployed to its own domain.
+
+---
+
 ## Website Sections
 
 | Section          | What's inside                                                       |
@@ -61,8 +76,45 @@ Built using **HTML, CSS, and JavaScript**.
 
 ---
 
+## Project Structure
+
+```
+├── index.html        # English version of the site
+├── index-kn.html      # Kannada (multilingual) version of the site
+├── styles.css         # Global styles
+├── script.js          # Interactivity: nav, modals, counters, typed text, contact form, etc.
+├── sitemap.xml         # SEO sitemap
+├── robots.txt          # Search engine crawling rules
+└── images/             # Project, certificate, and internship images
+```
+
+---
+
+## Getting Started
+
+To run the site locally:
+
+```bash
+git clone https://github.com/aditya-prabhu-udupi/<repo-name>.git
+cd <repo-name>
+```
+
+Then simply open `index.html` in your browser, or serve the folder with a local static server (e.g. `npx serve` or the VS Code "Live Server" extension).
+
+---
+
+## Contact
+
+- 📧 [aditya.prabhu0910@gmail.com](mailto:aditya.prabhu0910@gmail.com)
+- 💬 [WhatsApp](https://wa.me/918217755440)
+- 💻 [GitHub](https://github.com/aditya-prabhu-udupi)
+- 🔗 [LinkedIn](https://www.linkedin.com/in/aditya-prabhu-056825290/)
+- 🎮 [Discord](https://discord.com/users/1475356937448329267)
+
+---
+
 ## Author
 
-**Aditya Prabhu**  
-🎓 B.Tech — Robotics & Artificial Intelligence, NMAM Institute of Technology, Nitte  
+**Aditya Prabhu**
+🎓 B.Tech — Robotics & Artificial Intelligence, NMAM Institute of Technology, Nitte
 📍 Udupi, Karnataka, India
