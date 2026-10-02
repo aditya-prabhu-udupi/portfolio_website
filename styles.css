@@ -1131,39 +1131,49 @@ ul li:hover {
   position: relative;
   padding: 20px 0;
   margin-top: 40px;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 30px;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: linear-gradient(to bottom, var(--accent-primary), transparent);
+  counter-reset: timeline-step;
 }
 
 .timeline-item {
   position: relative;
-  padding-left: 80px;
   margin-bottom: 50px;
+  counter-increment: timeline-step;
 }
 
 .timeline-dot {
-  position: absolute;
-  left: 18px;
-  top: 0;
-  width: 25px;
-  height: 25px;
-  background: var(--accent-primary);
-  border-radius: 50%;
-  border: 4px solid var(--bg-secondary);
-  box-shadow: 0 0 15px var(--accent-glow);
-  z-index: 1;
+  display: none;
 }
 
 .timeline-content {
   position: relative;
+}
+
+/* Numbered marker (01, 02, 03...) in the card's top-right corner.
+   The count restarts for each .timeline (Education, Internships). */
+.timeline-content::after {
+  content: counter(timeline-step, decimal-leading-zero);
+  position: absolute;
+  top: 14px;
+  right: 22px;
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--accent-primary);
+  opacity: 0.28;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.timeline-content:hover::after {
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .timeline-content::after {
+    font-size: 1.8rem;
+    top: 10px;
+    right: 14px;
+  }
 }
 
 .timeline-date {
@@ -2437,23 +2447,6 @@ body.modal-open {
   color: white;
 }
 
-.discord {
-  background: rgba(114, 137, 218, 0.1);
-  color: #7289DA;
-}
-
-.discord::before {
-  background: #7289DA;
-}
-
-.discord:hover {
-  transform: translateY(-5px);
-}
-
-.discord:hover i {
-  color: white;
-}
-
 /* Contact Form */
 .contact-form-container {
   background: var(--bg-card);
@@ -2863,21 +2856,6 @@ footer {
   /* About Split Blocks */
   .about-split-blocks {
     flex-direction: column;
-  }
-
-  /* Timeline */
-  .timeline::before {
-    left: 8px;
-  }
-
-  .timeline-item {
-    padding-left: 40px;
-  }
-
-  .timeline-dot {
-    left: 0;
-    width: 18px;
-    height: 18px;
   }
 
   /* Achievement Cards - Stack icon and content vertically on mobile */

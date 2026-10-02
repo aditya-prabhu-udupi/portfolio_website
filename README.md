@@ -72,7 +72,7 @@ Built using **HTML, CSS, and JavaScript**.
 | **Projects**     | Academic and personal projects with details                         |
 | **Certificates** | Certifications with a full gallery view                             |
 | **Activities**   | Outreach programs, competitions, and blood donations                |
-| **Contact**      | Email, WhatsApp, LinkedIn, GitHub, Discord, and a message form      |
+| **Contact**      | Email, WhatsApp, LinkedIn, GitHub, and a message form               |
 
 ---
 
@@ -109,12 +109,11 @@ Then simply open `index.html` in your browser, or serve the folder with a local 
 - 💬 [WhatsApp](https://wa.me/918217755440)
 - 💻 [GitHub](https://github.com/aditya-prabhu-udupi)
 - 🔗 [LinkedIn](https://www.linkedin.com/in/aditya-prabhu-056825290/)
-- 🎮 [Discord](https://discord.com/users/1475356937448329267)
 
 ---
 
 ## Author
 
-**Aditya Prabhu**
-🎓 B.Tech — Robotics & Artificial Intelligence, NMAM Institute of Technology, Nitte
+**Aditya Prabhu**  
+🎓 B.Tech — Robotics & Artificial Intelligence, NMAM Institute of Technology, Nitte  
 📍 Udupi, Karnataka, India
