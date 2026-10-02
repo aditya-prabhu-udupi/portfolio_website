@@ -3039,3 +3039,29 @@ section::before {
     box-shadow: none;
   }
 }
+
+/* Highlighted note inside a donation entry (e.g. special camps) */
+.donation-highlight {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin: 0 0 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(233, 99, 253, 0.14), rgba(255, 193, 7, 0.10));
+  border: 1px solid rgba(233, 99, 253, 0.35);
+}
+
+.donation-highlight > i {
+  color: #ffc107;
+  font-size: 18px;
+  margin-top: 4px;
+}
+
+.donation-entry .donation-highlight p {
+  background: none;
+  border-left: none;
+  padding: 0;
+  margin: 0;
+}

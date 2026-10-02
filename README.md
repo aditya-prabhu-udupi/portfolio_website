@@ -51,13 +51,13 @@ Built using **HTML, CSS, and JavaScript**.
 | Project                                                                    | Stack                                             | Status                           |
 | -------------------------------------------------------------------------- | ------------------------------------------------- | -------------------------------- |
 | [Udupi Mallige Disease Detection](https://comingsoonprojectt.netlify.app/) | Python, CNN                                       | In Progress (Sep 2026 – Present) |
-| [Krishi](https://comingsoonprojectt.netlify.app/)                          | Flask, PostgreSQL, HTML, CSS, JavaScript, PWA     | In Progress (Jun 2026 – Present) |
+| [Krishi](https://krishi-khate.onrender.com/)                               | Flask, PostgreSQL, HTML, CSS, JavaScript, PWA     | In Progress (Jun 2026 – Present) |
 | [Schoint Finder](https://schoint.onrender.com/)                            | Python (Flask), HTML, CSS, JavaScript, SQLite     | Completed                        |
 | Telegram AI Bot                                                            | Python, aiogram, OpenAI API                       | Completed                        |
 | [Recipe Generator](https://recipe-generator-qful.onrender.com/)            | Python (Flask), HTML, CSS, JavaScript, OpenAI API | Completed                        |
 | [Portfolio Website](https://aditya-prabhu-portfolio.netlify.app/)          | HTML, CSS, JavaScript                             | Ongoing refinement               |
 
-> Note: Udupi Mallige Disease Detection and Krishi are still under active development — their project links currently point to a "coming soon" placeholder until each is deployed to its own domain.
+> Note: Udupi Mallige Disease Detection is still under active development — its project link currently points to a "coming soon" placeholder until it is deployed to its own domain. Krishi is live but still being improved.
 
 ---
 
